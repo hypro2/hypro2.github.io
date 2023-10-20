@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hypro2.github.io/sitemap.xml
+Sitemap: {{ '/sitemap.xml' | relative_url | prepend: site.url }}
