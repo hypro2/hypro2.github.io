@@ -1,13 +1,13 @@
 ---
 layout: post
-title: SSE(서버-사이드 이벤트)를 이용한 Flask 스트리밍 실시간 챗봇을 위한 연습
+title: exllamav2로 exl2형식으로 양자화하기
 ---
 
 데이터셋은 준비했고, 모델도 형식에 맞게 변환했고 리눅스에서 명령어로 exl2를 변환해주는 코드를 작성해주면된다.
 
 보면서 따라 했는데도 힘들구먼 결과가 잘나올려나
 
-<img width="457" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/a2af334a-563a-4ee6-9f50-f4d388a1b769">
+<img width="769" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/a2af334a-563a-4ee6-9f50-f4d388a1b769">
 
 [https://github.com/turboderp/exllamav2/blob/master/doc/convert.md](https://github.com/turboderp/exllamav2/blob/master/doc/convert.md)
 
