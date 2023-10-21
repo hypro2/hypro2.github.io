@@ -7,7 +7,7 @@ LLaVA-1.5는 이미지 분석이 가능한 멀티모달의 오픈소스로서 11
 
 [https://llava-vl.github.io/](https://llava-vl.github.io/)
 
-<img width="458" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/e230ea96-31de-457a-acf5-b7e96e850c5d">
+<img width="769" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/e230ea96-31de-457a-acf5-b7e96e850c5d">
 
 원문에서 중요한 아키텍쳐 부분 발췌
 
@@ -26,7 +26,7 @@ Hv = W · Zv, 여기서 Zv = g(Xv) (1)
   
 LLaVA: LLaVA는 언어와 비전을 통합하기 위해 간단한 선형 프로젝션 레이어를 사용하는 경량 모델로서, 이미지의 시각 특성을 언어 임베딩으로 변환하여 언어 모델과 통합합니다. 이것은 상대적으로 간단한 방법입니다. Flamingo 및 BLIP-2: Flamingo와 BLIP-2는 보다 복잡한 모델 아키텍처를 사용합니다. Flamingo는 게이트드 크로스-어텐션과 같은 특별한 메커니즘을 사용하여 언어와 비전 간의 상호 작용을 조절하며, BLIP-2는 "Q-former"와 같은 특수한 언어 처리 모듈을 도입하여 다양한 다모달 작업을 수행합니다. 하지만 라바는 간단한 선형프로젝션 레이어를 통해서 경량화하고 성능을 높혔다고 합니다.
 
-<img width="463" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/4f6110e4-e8e7-40a3-9ed0-87595d53249c">
+<img width="769" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/4f6110e4-e8e7-40a3-9ed0-87595d53249c">
 
 
 ```
