@@ -1,5 +1,5 @@
 # GitHub 블로그
-
+[깃 블로그](hypro2.github.io)
 ## 노션
 [노션 포트폴리오](https://hyeongjunkim.notion.site/75b716ee624d40289e6f30d63acf3a58?pvs=4)
 
