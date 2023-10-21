@@ -5,7 +5,7 @@ title: LLM 기반의 서비스 만들 때
 
 LLM 기반의 서비스 만들 때 LLM을 이용한 서비스를 많을때 필요한 과정을 선택할 때, 다음과 같은 요소들을 고려해야 합니다: 복잡성, 비용, 품질 등.
 
-[<img width="449" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/005ebfcc-866a-4810-965a-34ca1137f6a4">
+[<img width="769" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/005ebfcc-866a-4810-965a-34ca1137f6a4">
 
 
 -   Train from Scratch: 모델을 처음부터 학습시키는 방법
@@ -29,7 +29,7 @@ LLM (Language Model): LLM의 합성 능력은 검색기와 결합하여 사용�
 
 ### **"성능 향상 vs. 비용/리스크 감소" 과 "데이터 친화 vs 사용자 친화"**
 
-<img width="451" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/89a76bd8-86af-4b5e-b17f-621e4fc4efdd">
+<img width="769" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/89a76bd8-86af-4b5e-b17f-621e4fc4efdd">
 
 1.  RAG (Retrieval-Augmented Generation)
     -   좋은 임베딩은 유사 항목 검색 같은 다운스트림 작업을 잘 수행하는 것
@@ -61,7 +61,7 @@ LLM (Language Model): LLM의 합성 능력은 검색기와 결합하여 사용�
 
 ## **1\. 오픈 소스 LLM의 Fine-Tuning**
 
-<img width="451" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/42491e60-b131-43cd-aece-dee01b36b4f5">
+<img width="769" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/42491e60-b131-43cd-aece-dee01b36b4f5">
 
 
 이 접근 방식에서, 오픈 소스 언어 모델(Large Language Model)을 기반으로 시작합니다. 대표적으로 GPT-3와 같은 모델을 사용할 수 있습니다. 그러나 이 모델은 처음에는 일반적인 언어 이해 능력만 가지고 있으며 특정 도메인 또는 회사의 내부 지식에 대한 이해가 없습니다.
@@ -72,7 +72,7 @@ LLM (Language Model): LLM의 합성 능력은 검색기와 결합하여 사용�
 
 ## **2\. 검색 증강 생성 (RAG)**
 
-<img width="465" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/95d98391-57b6-4d35-a000-72672dccf677">
+<img width="769" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/95d98391-57b6-4d35-a000-72672dccf677">
 
 
 첫 번째 단계 - 데이터 분할 및 저장:
