@@ -30,18 +30,18 @@ decode_output
 
 # 파인 튜닝 LoRA
 
-<img width="552" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/775ebde5-6afa-4d9f-b970-1f973ab6c69b">
+<img width="769" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/775ebde5-6afa-4d9f-b970-1f973ab6c69b">
 
 
 ---
 
 경사 하강법의 의한 가중치 업데이트 방식을 모방하므로서 LoRA가 일종의 가중치 업데이트가 된다.
 
-<img width="147" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/b1ef3a4f-9c9f-4598-82ee-547c61d63084">
+<img width="300" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/b1ef3a4f-9c9f-4598-82ee-547c61d63084">
 
 W0x + delta Wx에 대한 보강 설명 링크.
 
-<img width="201" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/17a1030d-29f0-4e48-bd07-f97cc4d1e52b">
+<img width="300" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/17a1030d-29f0-4e48-bd07-f97cc4d1e52b">
 
 [https://suboptimal.wiki/explanation/gradient-descent/](https://suboptimal.wiki/explanation/gradient-descent/)
 
