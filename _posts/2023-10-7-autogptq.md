@@ -5,7 +5,7 @@ title: AutoGPTQ를 이용한 양자화 하는 방법
 
 양자화는 성능의 정확도 손실에 미치지 않는 범위에서 float32에서 4bit,8bit와 같이 저밀도가 낮은 데이터 타입으로 표현해서 효율적 계산을 수행하도록 하는 방법 주로, 입력을 정량화 상수로 스케일링 하여 입력을 정규화 하는 것으로, 학습이 완료된 가중치에 float 32에서 가중치 min값과 max값이 생기는데 int에 매칭 시켜주므로써 메모리 사용량을 획기적으로 줄여주는 방법 
 
-<img width="526" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/4bf34178-db4f-456e-bc07-3a7b2598ca87">
+<img width="769" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/4bf34178-db4f-456e-bc07-3a7b2598ca87">
 
 # 양자화 모델의 필요성
 
@@ -43,7 +43,7 @@ GPTQ의 정확도는 그룹화를 통해 개선될 수 있으며, 여기서 그�
 
 수식)
 
-<img width="275" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/83617ff1-ccf7-4ddf-822a-c1e271d9516c">
+<img width="769" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/83617ff1-ccf7-4ddf-822a-c1e271d9516c">
 
 
 w가 각층의 weight이고, 제곱의 오차를 최소화하고, H를 (...)해서 양자화를 한다.
@@ -60,7 +60,7 @@ H: 헤시안 행렬
 
 GPTQ 양자화는 현재 텍스트 모델에서만 작동합니다. 또한 양자화 프로세스는 하드웨어에 따라 많은 시간이 소요될 수 있습니다
 
-<img width="527" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/f803f3bf-0923-49c5-91d3-57039315bbc7">
+<img width="769" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/f803f3bf-0923-49c5-91d3-57039315bbc7">
 
 
 (175B 모델 = NVIDIA A100 사용 시 4 gpu 시간). 정량화하려는 모델의 GPTQ 정량화 버전이 아직 없는 경우 허깅 페이스 허브에서 확인하시기 바랍니다.
