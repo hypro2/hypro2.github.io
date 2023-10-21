@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-안녕하세요. 김형준입니다.
+안녕하세요. 김형입니다.
 
 ### More Information
 
