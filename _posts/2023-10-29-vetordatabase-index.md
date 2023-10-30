@@ -17,6 +17,7 @@ title: 벡터 데이터베이스와 벡터 인덱스 Faiss
 ![이미지 출처 : https://youtu.be/7WCRhW1Z8NI](https://blog.kakaocdn.net/dn/bi5H88/btszk7khk0W/XfFEaiYKHbmjrHiRosaZhk/img.png)
 
 이미지 출처 : https://youtu.be/7WCRhW1Z8NI
+
 주로 사용되는 거리 계산 법은 두가지로 유클리디안 거리와 코사인 거리 두가지를 가장 맣이 사용합니다. 유클리드 거리는 두 벡터 간의 직선 거리를 계산하는 방법입니다. 반면에 코사인 유사도는 두 벡터 간의 각도를 계산하여 유사도를 측정하는 방법입니다.
 
 그렇다면 왜 자연어 처리에서는 보통 코사인 유사도를 사용하는지에 대해서 설명하자면, 첫째, 벡터의 크기를 무시할 수 있습니다.
@@ -32,6 +33,7 @@ title: 벡터 데이터베이스와 벡터 인덱스 Faiss
 ![이미지 출처 : https://youtu.be/7WCRhW1Z8NI](https://blog.kakaocdn.net/dn/MzZKY/btsznCDNzGc/FnoA8GzICT3huiq1wL3rRK/img.png)
 
 이미지 출처 : https://youtu.be/7WCRhW1Z8NI
+
 
 **벡터 데이베이스 종류**
 
