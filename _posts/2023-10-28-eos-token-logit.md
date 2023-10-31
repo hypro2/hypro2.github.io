@@ -66,3 +66,7 @@ temperature=0.1,
 ```
 
 StoppingCriteriaList와 조합해서 쓰면 EOS 토큰 생성 문제는 해결 할 수 있을 거같습니다 감사합니다.
+
+## 추가적으로 알게된 사실
+tokenizer.pad_token = tokenizer.eos_token 대신 tokenizer.pad_token = tokenizer.unk_token을 사용하면 된다고 합니다.
+그동안 eos 토큰을 패딩 토큰으로 사용했는데 이러한 문제점이 있었군요 
