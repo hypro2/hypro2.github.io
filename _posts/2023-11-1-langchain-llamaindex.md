@@ -12,7 +12,8 @@ title: 랭체인과 라마인덱스 비교
 📚 Langchain는 간단하게 시작하기 쉬우며 예제와 자료가 풍부함.  
 🧰 llama Index는 복합 에이전트 구성과 유연한 메모리 구조에 더 적합.  
 
-📢 코딩 초보자나 프로젝트 방향을 모르는 경우 Langchain을 시작하는 것이 권장됨. llama Index는 고급 사용자나 명확한 프로젝트 요구사항이 있는 경우에 적합.
+📢 코딩 초보자나 프로젝트 방향을 모르는 경우 Langchain을 시작하는 것이 권장됨.
+💡 llama Index는 고급 사용자나 명확한 프로젝트 요구사항이 있는 경우에 적합.
 
 #### 랭체인과 라마인덱스 비교
 ![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FrdIRx%2Fbtszy3Jaw8y%2FjdbbN6j4jjRqZqK4C9EnJK%2Fimg.png)
