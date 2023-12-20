@@ -166,7 +166,7 @@ message = HumanMessage(
             "type": "text",
             "text": "What's in this image?",
         },  # 선택적으로 텍스트 부분을 제공할 수 있습니다.
- 
+
         {"type": "image_url", "image_url": image_url},
     ]
 )
