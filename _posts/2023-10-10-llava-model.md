@@ -41,5 +41,4 @@ LLaVA: LLaVA는 언어와 비전을 통합하기 위해 간단한 선형 프로�
     --image-file "./image.jpg" \
     --load-8bit
 ```
-
-[https://github.com/haotian-liu/LLaVA/blob/e854a2bf85118c504f6f16bf5c3c7c92f8fa8c6b/llava/model/language\_model/llava\_llama.py#L41](https://github.com/haotian-liu/LLaVA/blob/e854a2bf85118c504f6f16bf5c3c7c92f8fa8c6b/llava/model/language_model/llava_llama.py#L41)
+https://github.com/haotian-liu/LLaVA
