@@ -1,6 +1,6 @@
 title: "김형 BLOG"
-author: "Blog Author"
-description: "AI 연습하는 연습장"
+author: "김형"
+description: "안녕하세요. 여기는 LLM을 연습하는 연습장"
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
@@ -20,13 +20,21 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "README.md"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
-  - {title: Mail, icon: envelope, url: "mailto:hyeong9647@gmail.com"}
+  - {title: Blog, icon: blogger, url: "https://hyeong9647.tistory.com"}
   - {title: Github, icon: github, url: "https://github.com/hypro2"}
   - {title: Subscribe, icon: rss, url: "/feed.xml"}
-
+  - {title: Mail, icon: envelope, url: "mailto:hyeong9647@gmail.com"}
+  
 comments:
 #  disqus_shortname: ""    # see https://disqus.com/
 #  isso_domain: ""         # see https://posativ.org/isso/
 
 plugins:
  - jekyll-feed
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    default_lang: 'python'
