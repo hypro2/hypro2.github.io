@@ -5,6 +5,7 @@ title: llama2에 remon 데이터로 8bit LoRA 학습
 
 간단히 llama2를 통해 remon데이터를 학습시켜서 AI인간 만드는 짓을 하겠다 remon data는 허깅 페이스에서 쉽게 구할 수 있음 nsfw가 없는 클린?한 데이터를 사용합니다.
 
+
 [https://huggingface.co/datasets/junelee/remon\_without\_nsfw](https://huggingface.co/datasets/junelee/remon_without_nsfw)
 
 

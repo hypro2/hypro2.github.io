@@ -10,6 +10,7 @@ OpenAI의 function calling은 출시 됬을 때 chatgpt를 이용한 개발자�
 
 이번 포스트는 Jsonformer를 통해서 OpenAI의 function calling이 무엇인가? 어떻게 구현 됬는지 알아보려고 합니다.  
 
+
 ![image](https://github.com/hypro2/hypro2.github.io/assets/84513149/64d1135f-55d9-4848-bab3-f5bf7abe0d46)
 
 

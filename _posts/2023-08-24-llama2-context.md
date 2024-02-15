@@ -4,6 +4,7 @@ title: llama2를 context 8k까지 확장하는 방법 RoPE, exllama
 ---
 해당 부분의 max\_seq\_len을 늘려주고 compress\_pos\_emb 혹은 alpha\_value를 지정해준 것입니다. 여기서 원래 지원하는 max 시퀀스의 길이를 늘리고 싶은 만큼의 배수를 넣어주면 적용하면 됩니다.  이것이 어떻게 되는 것을 제가 이해하기로는 Position embedding은 Self attention의 포지션에 대한 위치를 기억 시키기 위해 사용이 되는 중요한 요소중 하나 입니다. Llama는 Rotary Position Embedding은 회전행렬을 사용하여 위치에 대한 정보를 인코딩 하는 방식으로 구현되어 있습니다.
 
+
 기존의 Position Embedding 부터 알고 가야되는데, Position Embedding은 단순히 임베딩 벡터에 순서를 매겨서 위치 정보를 인코딩합니다. Rotary Position Embedding은 회전행렬을 사용하여 위치에 대한 정보를 인코딩하는 방식을 사용합니다. 회전행렬은 벡터를 회전시키는 행렬로, 벡터의 크기는 유지하면서 방향을 바꿀 수 있습니다. Rotary Position Embedding은 Transformer 모델의 Attention 메커니즘에서 입력 벡터를 회전시키는 방식으로 위치 정보를 인코딩합니다. Attention 메커니즘은 입력 벡터의 위치에 따라 가중치를 부여하는 방식으로 작동합니다. Rotary Position Embedding은 입력 벡터의 위치에 따라 회전행렬을 생성하여, 기존의 절대 위치의 Position Embedding보다 Attention 메커니즘이 입력 벡터의 위치를 더 잘 이해할 수 있도록 합니다.
 
 그러면, 트랜스포머 기반 모델은 학습된 토큰 사이즈에서 1024라면 훈련한 다음, 1024를 넘어가는 1025 토큰을 주어서 이제 1025 위치에서 단어를 보고 마치 '1025가 뭐야? 이런 건 처음 봤어' 혼란해 한다는 것입니다.

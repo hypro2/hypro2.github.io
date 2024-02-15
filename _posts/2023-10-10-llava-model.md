@@ -5,8 +5,8 @@ title: LLaVA-1.5 이미지 텍스트 멀티모달
 
 LLaVA-1.5는 이미지 분석이 가능한 멀티모달의 오픈소스로서 11개 벤치마크에서 소타를 달성했다.
 
-[https://llava-vl.github.io/](https://llava-vl.github.io/)
 
+[https://llava-vl.github.io/](https://llava-vl.github.io/)
 <img width="769" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/e230ea96-31de-457a-acf5-b7e96e850c5d">
 
 원문에서 중요한 아키텍쳐 부분 발췌

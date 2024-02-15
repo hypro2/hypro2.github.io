@@ -5,6 +5,8 @@ title: AutoGPTQ를 이용한 양자화 하는 방법
 
 양자화는 성능의 정확도 손실에 미치지 않는 범위에서 float32에서 4bit,8bit와 같이 저밀도가 낮은 데이터 타입으로 표현해서 효율적 계산을 수행하도록 하는 방법 주로, 입력을 정량화 상수로 스케일링 하여 입력을 정규화 하는 것으로, 학습이 완료된 가중치에 float 32에서 가중치 min값과 max값이 생기는데 int에 매칭 시켜주므로써 메모리 사용량을 획기적으로 줄여주는 방법 
 
+
+
 <img width="769" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/4bf34178-db4f-456e-bc07-3a7b2598ca87">
 
 # 양자화 모델의 필요성

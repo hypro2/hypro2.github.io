@@ -6,6 +6,7 @@ title : Efficient Training of Language Models to Fill in the Middle | 논문 리
 1.  **대형 언어 모델 소개:**
 2.   본 논문에서는 2017년에 소개된 transformer 아키텍처를 기반으로 한 대형 언어 모델의 성공에 대해 논의합니다. 이러한 모델들은 다양한 작업에서 최첨단 성능을 달성하며 읽기 이해, 질문 응답, 논리 추론 및 상식적 추론과 같은 여러 벤치마크에서 우수한 성과를 보입니다.
 
+
 **[https://youtu.be/eHrUKmeQEAA?si=TaXBky4q\_1uQypJs](https://youtu.be/eHrUKmeQEAA?si=TaXBky4q_1uQypJs)**
 
 3.  **Transformer 기반 언어 모델의 종류:**
