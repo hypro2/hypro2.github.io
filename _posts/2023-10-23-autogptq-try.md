@@ -5,6 +5,7 @@ title: AutoGPTQ로 양자화
 
 오늘은 AutoGPTQ로 한글 라마13b 모델을 양자화해볼려고 한다.  오늘도 koalpaca 데이터셋을 사용하려고 한다. 가볍게 데이터셋 프롬프트 형식만 맞춰서 만들어주고... 
 
+
 ```
 ds = load_dataset("beomi/KoAlpaca-v1.1a", split="train")
 

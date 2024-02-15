@@ -7,6 +7,7 @@ title: exllamav2로 exl2형식으로 양자화하기
 
 보면서 따라 했는데도 힘들구먼 결과가 잘나올려나
 
+
 <img width="769" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/a2af334a-563a-4ee6-9f50-f4d388a1b769">
 
 [https://github.com/turboderp/exllamav2/blob/master/doc/convert.md](https://github.com/turboderp/exllamav2/blob/master/doc/convert.md)

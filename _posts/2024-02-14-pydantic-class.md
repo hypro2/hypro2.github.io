@@ -8,6 +8,7 @@ title: Pydantic Class 란?
 
 pydantic은 이제 안사용하는 곳이 없을 정도로 필수 라이브러리가 되었습니다.데이터 클래스와 자료구조 관리에 필수템이 되어 모든 개발자들이 사용하고 있습니다.랭체인에서는 pydantic한 구조 사용은 적극적으로 권장(거의 필수)하며 거의 모든 부분에서 사용되고 있습니다.
 
+
 #### **pydantic을 사용하는 주요 기업**
 
 **OpenAI** ([https://github.com/pydantic/pydantic/discussions/6372](https://github.com/pydantic/pydantic/discussions/6372))

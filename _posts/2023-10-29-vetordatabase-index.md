@@ -8,6 +8,7 @@ title: 벡터 데이터베이스와 벡터 인덱스 Faiss
 
 예시 그림 Mnist 3차원같이 한 공간에 표현할 수 있어야 한다. (에 표현한 그림이라서 2차원같지만 3차원)
 
+
 ![](https://blog.kakaocdn.net/dn/c7ICK5/btszk506KEn/CDZH5hSINW3WEcLfj3c6cK/img.png)
 
 기존의 키-밸류 기반의 DB에서 이러한 복합 비정형 데이터를 찾을 때 상당히 느리고 정확하지 않은 문제점이 있어서 고안 됬다고 한다.

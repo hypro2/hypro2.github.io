@@ -5,6 +5,7 @@ title: Gemini Pro API 사용해보기 (Python, Langchain)
 
 제미나이 프로의 API 발급과 사용방법을 알아보고 Python에서 작동하는 것을 보고 랭체인에 적용해보자
 
+
 # Gemini Pro API 사용료
 
 현재(23년 12월) 무료 버전만 사용가능하고, 1분당 60번 호출 가능

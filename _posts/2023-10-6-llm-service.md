@@ -5,6 +5,7 @@ title: LLM 기반의 서비스 만들 때
 
 LLM 기반의 서비스 만들 때 LLM을 이용한 서비스를 많을때 필요한 과정을 선택할 때, 다음과 같은 요소들을 고려해야 합니다: 복잡성, 비용, 품질 등.
 
+
 [<img width="769" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/005ebfcc-866a-4810-965a-34ca1137f6a4">
 
 
