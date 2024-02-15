@@ -1,5 +1,5 @@
 title: "김형 BLOG"
-author: "Blog Author"
+author: "김형"
 description: "AI 연습하는 연습장"
 permalink: /:title/
 lang: "en"
@@ -20,10 +20,10 @@ navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "README.md"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
-  - {title: Blog, icon: blogger, url:"https://hyeong9647.tistory.com/"}
   - {title: Mail, icon: envelope, url: "mailto:hyeong9647@gmail.com"}
   - {title: Github, icon: github, url: "https://github.com/hypro2"}
   - {title: Subscribe, icon: rss, url: "/feed.xml"}
+  - {title: Blog, icon: blog, url: "https://hyeong9647.tistory.com"}
 
 comments:
 #  disqus_shortname: ""    # see https://disqus.com/
