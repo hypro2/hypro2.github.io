@@ -1,6 +1,6 @@
 title: "김형 BLOG"
 author: "김형"
-description: "안녕하세요. 여기는 LLM을 연습하는 연습장"
+description: "안녕하세요. 여기는 LLM을 연습하는 연습장 입니다."
 permalink: /:title/
 lang: "en"
 excerpt_separator: "\n\n\n"
@@ -26,8 +26,8 @@ external:                  # shows a footer with social links - for available ic
   - {title: Mail, icon: envelope, url: "mailto:hyeong9647@gmail.com"}
   
 comments:
-#  disqus_shortname: ""    # see https://disqus.com/
-#  isso_domain: ""         # see https://posativ.org/isso/
+ disqus_shortname: ""    # see https://disqus.com/
+ isso_domain: ""         # see https://posativ.org/isso/
 
 plugins:
  - jekyll-feed
