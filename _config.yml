@@ -24,10 +24,6 @@ external:                  # shows a footer with social links - for available ic
   - {title: Github, icon: github, url: "https://github.com/hypro2"}
   - {title: Subscribe, icon: rss, url: "/feed.xml"}
   - {title: Mail, icon: envelope, url: "mailto:hyeong9647@gmail.com"}
-  
-comments:
-#  disqus_shortname: ""    # see https://disqus.com/
-#  isso_domain: ""         # see https://posativ.org/isso/
 
 plugins:
  - jekyll-feed
