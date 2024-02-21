@@ -5,12 +5,6 @@ layout: default
 <article>
   {% include meta.html post=page %}
   {{ content }}
-  {% if page.comments != false and site.comments.isso or site.comments.disqus %}
-    <hr>
-    {% if site.comments.isso_domain %}<div id="isso-thread"></div>{% endif %}
-    {% if site.comments.disqus_shortname %}<div id="disqus_thread"></div>{% endif %}
-    <noscript>Please enable JavaScript to view comments.</noscript>
-  {% endif %}
 
   <div>
     <script src="https://utteranc.es/client.js"
@@ -19,6 +13,7 @@ layout: default
     theme="preferred-color-scheme"
     crossorigin="anonymous"
     async>
-</script>
-    </div>
+    </script>
+  </div>
+  
 </article>
