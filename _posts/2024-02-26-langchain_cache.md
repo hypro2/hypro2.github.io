@@ -9,11 +9,11 @@ title: 랭체인 CacheBackedEmbeddings으로 캐시 임베딩 만들기
 
 
 CacheBackedEmbeddings를 초기화하는 주요한 방법은 from_bytes_store입니다. 이는 다음 매개변수를 사용합니다:
-underlying_embedder: 임베딩에 사용할 임베더입니다.
+underlying_embedder: 임베딩에 사용할 임베더입니다. OpenAIEmbeddings나 HuggingFaceEmbeddings를 사용합니다.
 document_embedding_cache: 문서 임베딩을 캐싱하기 위한 ByteStore입니다.
 namespace: (옵션, 기본값은 "") 문서 캐시에 사용할 네임스페이스입니다. 
 
-이 네임스페이스는 다른 캐시와의 충돌을 피하기 위해 사용됩니다. 예를 들어, 임베딩 모델의 이름으로 설정하세요.
+이 네임스페이스는 다른 캐시와의 충돌을 피하기 위해 사용됩니다. 예를 들어, 임베딩 모델의 이름으로 설정하는 것을 추천합니다.
 
 CacheBackedEmbeddings는 cache를 저장하는 store로는 LocalFileStore와 InMemoryByteStore를 사용 할 수 있습니다. 
 InMemoryByteStore의 경우, 메모리에 사용하는 InMemoryCache와 비슷한 작업을 하는데, InMemoryCache를 대신 넣어 사용 할 수 있습니다.
@@ -38,4 +38,5 @@ def cache_embed_wrapper(embedding_model, local_store_path=None):
 ```
 
 embedding_model.underlying_embeddings 밑에 embedding_model이 들어 있는 모습을 볼 수 있습니다. 
+
 그 외 동작은 embedding_model에서 사용한 명령어를 그대로 사용하면 됩니다. 
