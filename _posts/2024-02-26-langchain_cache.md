@@ -9,6 +9,8 @@ title: 랭체인 CacheBackedEmbeddings으로 캐시 임베딩 만들기
 
 CacheBackedEmbeddings를 초기화하는 주요한 방법은 from_bytes_store입니다. 
 
+
+
 ## 매개변수
 **underlying_embedder** : 임베딩에 사용할 임베더입니다. OpenAIEmbeddings나 HuggingFaceEmbeddings를 사용합니다.
 
