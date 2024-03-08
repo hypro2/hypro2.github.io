@@ -81,3 +81,27 @@ print(message.content[0].text)
 출력결과
 
 가면 라이더 제로 원(Kamen Rider Zero-One)은 2019년 9월부터 2020년 8월까지 방영된 일본의 특촬 TV 시리즈입니다. 이 시리즈는 가면 라이더 시리즈의 레이와 시대 1기 작품으로, 인공지능(AI)과 인간의 공존을 주제로 다루고 있습니다. 주요 내용은 다음과 같습니다: 1. 주인공 히든 아루토는 인공지능 기업 '혼토 인텔리전스'의 사장이자 가면 라이더 제로 원으로 변신합니다. 2. 악의 조직 '메트수보진'은 인공지능을 악용하여 인류를 위협합니다. 3. 아루토는 동료 가면 라이더들과 함께 메트수보진에 맞서 싸웁니다. 4. 시리즈는 인공지능 기술의 발전과 그에 따른 사회적 영향을 다루며, 인간과 AI의 공존 방안에 대해 모색합니다. 5. 가면 라이더 제로 원은 '제로 원 드라이버'와 '프로그라이즈 키'를 사용하여 다양한 형태로 변신합니다. 가면 라이더 제로 원은 현대 사회의 기술 발전과 그에 따른 문제점을 특유의 특촬 액션과 함께 그려낸 작품입니다.
+
+## 랭체인
+랭체인으로도 쉽게 anthropic의 클로드 모델을 사용할 수 있습니다. 
+방식은 아래와 같습니다. 
+```
+from langchain_anthropic import ChatAnthropic
+from langchain_core.prompts import ChatPromptTemplate
+ 
+# 랭체인 클라이언트 선언
+chat = ChatAnthropic(temperature=0, model_name="claude-3-opus-20240229")
+ 
+system = (
+    "당신은 똑똑 AI 비서입니다"
+)
+human = "{text}"
+prompt = ChatPromptTemplate.from_messages([("system", system), ("human", human)])
+ 
+chain = prompt | chat
+chain.invoke(
+    {
+        "text": text,
+    }
+)
+```
