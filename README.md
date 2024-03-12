@@ -1,7 +1,17 @@
-# GitHub
+# GitHub 블로그에 오신 것을 환영합니다! 👋
+
 [Git Blog](https://hypro2.github.io)
 
 ![image](https://hypro2.github.io/assets/images/profile_image.jpg)
+
+
+## 소개
+안녕하세요! 제 GitHub 블로그에 오신 것을 환영합니다! 여기에서는 Language Learning Models (LLMs) 및 다른 관련 주제에 대한 다양한 업데이트, 리뷰 및 튜토리얼을 공유하고 있습니다. 제 블로그는 언어 기술의 최신 발전에 대해 궁금한 분들이나 열정적인 분들에게 도움이 되는 정보를 제공하기 위해 노력하고 있습니다. 
+
+언어 기술 분야에서의 혁신과 발전에 관심이 있는 분들에게 새로운 아이디어와 통찰력을 제공하고, 같이 성장하는 공간이 되기를 희망합니다.
+
+## 함께 소통해요!
+제 블로그를 자유롭게 탐험하고 GitHub을 통해 저와 소통해주세요. 제 콘텐츠가 유용하고 흥미로우셨다면, 꼭 별을 주세요! 여러분의 지지는 제게 큰 힘이 되며 계속해서 가치 있는 콘텐츠를 제공할 수 있도록 도와주는 역할을 합니다. 함께 배우고 성장해봐요! 🚀
 
 ## Jekyll Tempelete
 [Contrast](https://github.com/niklasbuschmann/contrast)
