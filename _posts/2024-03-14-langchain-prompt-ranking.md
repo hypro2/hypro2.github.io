@@ -2,13 +2,14 @@
 layout: post
 title: 깃허브 프로젝트 Langchain Prompt Ranking 만들었습니다.
 ---
+
 이번에는 개인 프로젝트를 만들어 보았습니다. 랭체인을 통해서 LLM의 프롬프트를 평가하는 프로젝트입니다. 이것은  gpt-prompt-engineer의 클론 프로젝트로 작동합니다. 랭체인에서 적용하기 위해서 랭체인으로 바꾸어서 진행하고 있습니다. 이것으로 다른 LLM모델들의 프롬프트도 GPT4를 통해서 ELO 레이팅으로 평가하므로서 확장성을 넓혔습니다. 
 
 [github](https://github.com/hypro2/Langchain_Ranking)
 
 
 
-# 🌟 Langchain Ranking 프로젝트 🌟
+# 🌟 Langchain Prompt Ranking 프로젝트 🌟
 
 Langchain 프롬프트 랭킹 프로젝트에 오신 것을 환영합니다! 🎉 이 프로젝트는 gpt-prompt-engineer의 혁신적인 개념을에 감명받아서 랭체인을 통해서 구현한 랭체인을 사용하여 모델을 평가하는 것에 대해 모두 이야기합니다. 🚀
 
@@ -80,7 +81,9 @@ gpt_rank.generate_and_compare_prompts(A="Korean")
 # 실행 결과
 
 ```
-['Discover the top 10 secrets to unlocking your full potential.', "Craft an enticing headline that captivates your audience's attention.", 'Craft compelling headlines that entice and engage your target audience.']
+['Discover the top 10 secrets to unlocking your full potential.',
+"Craft an enticing headline that captivates your audience's attention.",
+'Craft compelling headlines that entice and engage your target audience.']
 
 11%|███▊                              | 2/18 [00:09<01:15,  4.73s/it]
  Winner: Discover the top 10 secrets to unlocking your full potential.
