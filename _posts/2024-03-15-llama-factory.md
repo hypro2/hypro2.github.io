@@ -47,6 +47,8 @@ pip install bitsandbytes>=0.39.0
 
   
 이처럼 LLaMA-Factory를 활용하면 파인 튜닝이 더욱 효율적으로 가능해집니다.🔍✨  
+<img width="926" alt="image" src="https://github.com/hypro2/hypro2.github.io/assets/84513149/7cd533ad-e987-412a-b490-d8f609627e00">
+
   
 
 **자료 출처:**
