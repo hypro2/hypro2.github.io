@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 모델 리뷰 고퀄리티 애니 이미지 모델 animagine-xl-3.0
+title: 모델 리뷰 이미지 모델 animagine-xl-3.0
 ---
 **ANIMAGINE XL 3.0 개요:**  
 
