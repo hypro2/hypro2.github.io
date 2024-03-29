@@ -2,11 +2,9 @@
 layout: post
 title: 모델 리뷰 이미지 모델 animagine-xl-3.0
 ---
-**ANIMAGINE XL 3.0 개요:**  
+ANIMAGINE XL 3.0 개요
 
-**모델 설명:**  
-
-Animagine XL 3.0은 Animagine XL 2.0을 계승하는 고급 오픈 소스 애니메이션 텍스트-이미지 모델입니다.  
+모델 설명:Animagine XL 3.0은 Animagine XL 2.0을 계승하는 고급 오픈 소스 애니메이션 텍스트-이미지 모델입니다.  
 Cagliostro Research Lab에서 개발한 확산 기반의 텍스트-이미지 생성 모델입니다. Stable Diffusion XL을 사용하여 Cagliostro Research Lab에서 개발했습니다. 
 
 
