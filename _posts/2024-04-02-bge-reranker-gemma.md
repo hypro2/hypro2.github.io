@@ -1,6 +1,6 @@
 ---
 layout: post
-title: bge 리랭커 모델 bge-reranker-v2-gemma
+title: LLM기반 임베딩 모델, bge 리랭커 모델 'bge-reranker-v2-gemma'
 ---
 리랭커 모델 소개
 
