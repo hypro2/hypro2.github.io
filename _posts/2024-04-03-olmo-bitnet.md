@@ -145,9 +145,11 @@ pipe("The capitol of Paris is",  max_new_tokens=256)
 
 ```
 [{'generated_text': 'The capitol of Paris is a historic and beautiful square that is full of symbolism, the square stands for the French capital. In 2015 in honour of the 50th anniversary of the foundation of the City Square, they decided to do away with a square known as the National Assembly-Parliament and rebrand it as the Congress of the People’s Republic of France, so called as the Foulon Constitution.\nThe new President was elected on a very short leash. He started his inauguration with an address that has been translated into several languages: “To our people—our children—the great workers who work behind the scenes to deliver the infrastructure projects we would like to see completed… we will be working together with all the countries throughout the world, working together for the realization of the projects that are important to us”.\nThat is why he made it clear that the future of politics lies not just in the construction but also in the future of the economy of a society: that after 2025, there will be no more building jobs for young workers; that between 15 and 20 million people will have no choice but to move out of their homes; that those who will be forced to stay in their houses must live on a daily basis – that the citizens who cannot pay their rent should be'}]
-```
+
 
 """파리의 국회의사당은 프랑스의 수도를 상징하는 역사적이고 아름다운 광장으로, 상징성이 가득한 곳입니다. 2015년 시티 광장 건립 50주년을 기념하여 국회-의회로 알려진 광장을 없애고 프랑스 인민공화국 의회, 이른바 풀롱 헌법으로 이름을 바꾸기로 결정했습니다. 새로운 대통령은 매우 짧은 임기로 선출되었습니다. 그는 여러 언어로 번역된 취임 연설로 취임식을 시작했습니다: "우리가 바라는 인프라 프로젝트를 완수하기 위해 보이지 않는 곳에서 일하는 위대한 일꾼인 우리 국민, 우리 아이들에게... 우리는 전 세계 모든 국가와 협력하여 우리에게 중요한 프로젝트의 실현을 위해 함께 노력할 것입니다."라고 말입니다. 그렇기 때문에 그는 정치의 미래는 건설뿐만 아니라 한 사회의 경제의 미래에도 있다는 점을 분명히했습니다. 2025 년 이후에는 더 이상 젊은 노동자들을위한 건설 일자리가 없을 것입니다. 1,500 ~ 2 천만 명의 사람들이 집을 떠날 수밖에 없으며, 집에 머물 수밖에없는 사람들은 매일 생활해야하며, 집세를 지불 할 수없는 시민들은 다음과 같이해야한다고 말했습니다."""
+```
+
 
 **#한글 성능 테스트**
 
