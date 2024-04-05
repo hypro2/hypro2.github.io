@@ -4,7 +4,8 @@ title: 모델 리뷰 OLMo Bitnet 1B을 colab에서 실행해보자
 ---
 
 요즘 화두에 있는 Bitnet 양자화를 직접 구현했다는 NousResearch의 OLMo-Bitnet-1B을 리뷰해볼 예정입니다.  
-NousResearch에서 제시한 방식으로 실행을 하려고 합니다. 모델 및 실행에 필요한 코드는 레포지토리에 모델과 같이 trust\_remote\_code=True을 하면 실행 할 수 있습니다. NousResearch에서에서 구현한 BitLinear158 클래스 먼저 살펴 볼 예정입니다.
+NousResearch에서 제시한 방식으로 실행을 하려고 합니다. 모델 및 실행에 필요한 코드는 레포지토리에 모델과 같이 trust\_remote\_code=True을 하면 실행 할 수 있습니다. 
+NousResearch에서에서 구현한 BitLinear158 클래스 먼저 살펴 볼 예정입니다.
 
 
 
