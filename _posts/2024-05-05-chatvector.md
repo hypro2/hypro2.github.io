@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Paper 리뷰 Chat Vector 학습된 가중치 매개변수를 더하고 빼는 것으로 사전 학습된 모델에 대화 능력을 부여함
+title: Paper 리뷰 Chat Vector 학습된 가중치 매개변수를 더하고 빼는 것으로 사전 학습된 모델에 대화 능력을 부여
 ---
+
 LLM 관련 논문중에 재밌는 것을 발견 했습니다. Llama-3-Open-Ko-8B-Instruct-preview의 README를 보던 중 Chat Vector라는 것을 알게 되었습니다. Chat Vector 학습된 가중치 매개변수를 더하고 빼는 것으로 사전 학습된 모델에 대화 능력을 부여해준다는게 흥미로웠습니다.
 
 "With applying the idea from [Chat Vector paper](https://arxiv.org/abs/2310.04799), I released Instruction model named [Llama-3-Open-Ko-8B-Instruct-preview](https://huggingface.co/beomi/Llama-3-Open-Ko-8B-Instruct-preview)." ([https://huggingface.co/beomi/Llama-3-Open-Ko-8B-Instruct-preview](https://huggingface.co/beomi/Llama-3-Open-Ko-8B-Instruct-preview)) 발췌
