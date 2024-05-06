@@ -8,6 +8,7 @@ LLM 관련 논문중에 재밌는 것을 발견 했습니다. Llama-3-Open-Ko-8B
 
 
 
+
 **Chat Vector: A Simple Approach to Equip LLMs with Instruction Following and Model Alignment in New Languages**
 
 ![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FlC9p3%2FbtsHalVajVn%2FtvB8tLpM9H2XLEqloJu7sk%2Fimg.png)
