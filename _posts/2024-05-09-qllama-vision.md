@@ -1,6 +1,6 @@
 ---
-layout:post
-title:멀티모달 리뷰 qresearch의 llama3-vision-alpha 콜랩 구동
+layout: post
+title: 멀티모달 리뷰 qresearch의 llama3-vision-alpha 콜랩 구동
 ---
 
 LLM RnD 자료를 찾으러 Note에서 일본 LLM 동향을 검색하고 있었는데 qresearch라는 곳에서 llama3로 vision모델을 만들었다는 글을 보았습니다. 그냥 자기 것이 성능이 우수하다 이런 내용이 아닌 만들어서 코드 리뷰하는 문서 였습니다. 생각보다 유익한 내용인거 같아서 따라 구동 해봤습니다.
