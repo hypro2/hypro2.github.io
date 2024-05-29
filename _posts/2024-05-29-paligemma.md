@@ -4,9 +4,15 @@ title: PaliGemma 구글의 오픈소스 멀티모달 리뷰
 ---
 
 구글의 오픈소스 멀티모달 Paligemma입니다. 
+
 이 모델 또한 llava나 다른 모델 처럼 visual model과 llm을 선형 프로젝션해서 구현한 모델입니다. Joint Fusion의 멀티모달 이미지 텍스트	모델입니다. 이러한 joint fusion은 학습 과정에서 특정 레이어에서 다른 모달리티 데이터를 융합을 시도합니다.
+
 주로 임베딩층에서 clip모델과 llm 모델을 사용합니다. 이 경우에도 SiglipVisionModel과 GemmaModel을 사용해서 중간에 multi_modal_projector을 통해서 이미지 정보와 함께 llm에 전달해서 사용되는 것으로 보입니다. 
+
 이번에도 콜랩에서 작업을 진행했습니다. 궁금하신분은 https://github.com/hypro2/LLM-Multimodal-Colab/blob/main/multimodal/paligemma_3b_mix_224_colab.ipynb 여기서 확인 바랍니다. 
+
+
+
 
 ![image](https://github.com/hypro2/hypro2.github.io/assets/84513149/fe70e6f6-7961-4933-bd53-9b85f8e6fc2c)
 
