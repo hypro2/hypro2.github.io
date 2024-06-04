@@ -1,6 +1,6 @@
 ---
 layout: post
-title: LLM 병합 Mergekit을 사용해보자 간단
+title: LLM 병합 Mergekit을 사용해보자 간단히 따라해보기
 ---
 
 툴킷 소개 및 목적:
