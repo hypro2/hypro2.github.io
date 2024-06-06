@@ -57,7 +57,7 @@ yaml_config = """
        value: [0, 0.5, 0.3, 0.7, 1]
      - filter: mlp
        value: [1, 0.5, 0.7, 0.3, 0]
-     - value: 0.9
+     - value: 0.9 # 얼마나 원래 모델의 가중치를 보전할지.
  dtype: bfloat16
 
 """
