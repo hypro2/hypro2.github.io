@@ -73,12 +73,12 @@ _register_template(
     format_user=StringFormatter(
         slots=[
             (
-                "[|user|]\n\n{{content}}[|endofturn|]"
+                "[|user|]\n\n{{con_tent}}[|endofturn|]"
                 "[|assistant|]\n\n"
             )
         ]
     ),
-    format_system=StringFormatter(slots=["[|system|]\n\n{{content}}[|endofturn|]"]),
+    format_system=StringFormatter(slots=["[|system|]\n\n{{con_tent}}[|endofturn|]"]),
     format_prefix=EmptyFormatter(slots=[{"bos_token"}]),
     stop_words=["[|endofturn|]"],
     replace_eos=True,
