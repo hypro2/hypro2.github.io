@@ -1,6 +1,6 @@
 ---
 layout: post
-title: EXAONE 3.0 7.8B 모델의 llamafied
+title: EXAONE 3.0 7.8B 모델의 llamafied과 파인튜닝
 ---
 
 EXAONE 3.0 소개: EXAONE 3.0은 LG AI Research에서 개발한 명령 조정 언어 모델로, LLM(대형 언어 모델) 시리즈 중 최초의 개방형 모델로 유명합니다. 78억 개의 매개변수 버전이 연구 및 혁신을 지원하기 위해 공개적으로 출시되었습니다.
@@ -12,6 +12,8 @@ EXAONE 3.0 소개: EXAONE 3.0은 LG AI Research에서 개발한 명령 조정 �
 공개 가용성 및 사용: EXAONE 3.0은 주로 LG의 상업 파트너를 위한 것이지만 7.8B 모델은 비상업적 연구 목적으로 사용할 수 있습니다. 이 공개 릴리스는 더 광범위한 AI 연구 커뮤니티에 기여하는 것을 목표로 합니다.
 
 윤리적 고려 사항 및 안전 조치: 이 모델은 오용을 방지하기 위한 조치를 통해 엄격한 윤리 및 보안 테스트를 거쳤습니다. LG AI Research는 레드팀 구성 및 기타 안전 프로토콜을 통해 편견, 차별, 유해 콘텐츠에 대한 대응을 포함하여 책임 있는 사용을 강조합니다.
+
+
 
 ```
 
@@ -55,7 +57,32 @@ WARNING 08-07 10:22:11 config.py:1425] Casting torch.float16 to torch.bfloat16.
 INFO 08-07 10:22:11 llm_engine.py:176] Initializing an LLM engine (v0.5.3.post1) with config: model='./data/EXAONE-3.0-7.8B-Instruct-llamafied', speculative_config=None, tokenizer='./data/EXAONE-3.0-7.8B-Instruct-llamafied', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=4096, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None), seed=0, served_model_name=./data/EXAONE-3.0-7.8B-Instruct-llamafied, use_v2_block_manager=False, enable_prefix_caching=False)
 INFO 08-07 10:22:12 model_runner.py:680] Starting to load model ./data/EXAONE-3.0-7.8B-Instruct-llamafied...
 Loading safetensors checkpoint shards:   0% Completed | 0/4 [00:00<?, ?it/s]
-INFO 08-07 10:22:17 model_runner.py:692] Loading model weights took 14.5640 GB
+INFO 08-07 10:22:17 model_runner
+```
+
+## 파인튜닝 
+
+라마팩토리로 진행, 라마 팩토리에서 파인 튜닝 성공.
+
+https://github.com/hiyouga/LLaMA-Factory/blob/main/src/llamafactory/data/template.py
+
+커스텀 코드 추가
+```
+_register_template(
+    name="exaone",
+    format_user=StringFormatter(
+        slots=[
+            (
+                "[|user|]\n\n{{content}}[|endofturn|]"
+                "[|assistant|]\n\n"
+            )
+        ]
+    ),
+    format_system=StringFormatter(slots=["[|system|]\n\n{{content}}[|endofturn|]"]),
+    format_prefix=EmptyFormatter(slots=[{"bos_token"}]),
+    stop_words=["[|endofturn|]"],
+    replace_eos=True,
+)
 ```
 
 
