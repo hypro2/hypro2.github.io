@@ -73,7 +73,7 @@ _register_template(
     format_user=StringFormatter(
         slots=[
             (
-                "[|user|]\n\n{{con_tent}}[|endofturn|]"
+                "[|user|]\n\n{{con_tent}}"
                 "[|assistant|]\n\n"
             )
         ]
