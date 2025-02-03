@@ -35,9 +35,10 @@ bbbb = model.invoke(formatted_prompt)
 
 이러한 방식으로 호출하게 되면 잘못된 형식의 출력을 받을 수 있다. 왜냐하면 자체적으로 ChatPromptTemplate을 to_string해서 전달해서 사용하는 것으로 보인다.
 
+```
 System: You are a helpful assistant.
-
 Human: Tell me a joke about bears
+```
 
 위와 같은 형식으로 전달되기 때문에 저품질의 답변을 받게 된다. 제대로된 형식으로 전달하기 위해서는 체인 앞에 커스텀 펑션으로 한번 변환해줄 필요가 있다. 
 
@@ -76,5 +77,6 @@ Cutting Knowledge Date: December 2023
 Today Date: 26 Jul 2024
 You are a helpful assistant.<|eot_id|><|start_header_id|>user<|end_header_id|>
 Tell me a joke about bears<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+Why did the bear go to the doctor?\n\nBecause it had a grizzly cough.
 """
 ```
