@@ -12,7 +12,7 @@ MCP는 다양한 방식으로 구현할 수 있으며, `uv`를 사용하여 **ST
 
 본 문서에서는 **MCP를 리모트 서버에서 실행하고, SSE(Server-Sent Events) 방식으로 데이터를 스트리밍하는 방법**을 설명한다. 또한, **클로드 데스크탑(Claude Desktop)에서 MCP 서버를 설정하는 방법**도 포함한다.
 
-나름 이 깃블로그에서 ![첫번째 포스팅한 글](https://hypro2.github.io/SSE_flask_chatbot/)이 SSE를 이용한 플라스크 챗봇이라는 것을 보면 2년간 참 많은것이 바뀐 것을 볼 수 있다.
+나름 이 깃블로그에서 [첫번째 글](https://hypro2.github.io/SSE_flask_chatbot/)이 SSE를 이용한 플라스크 챗봇이라는 것을 보면 2년간 참 많은것이 바뀐 것을 볼 수 있다.
 
 
 
