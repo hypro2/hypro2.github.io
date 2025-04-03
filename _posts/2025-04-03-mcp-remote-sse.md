@@ -14,6 +14,12 @@ MCP는 다양한 방식으로 구현할 수 있으며, `uv`를 사용하여 **ST
 
 나름 이 깃블로그에서 [첫번째 글](https://hypro2.github.io/SSE_flask_chatbot/)이 SSE를 이용한 플라스크 챗봇이라는 것을 보면 2년간 참 많은것이 바뀐 것을 볼 수 있다.
 
+정확히 MCP를 Remote 실행하는 글이 없어서 내가 먼저 만들어서 공유하려고 한다. 그나마 클레어플레어 글을 참고해서 만들어봐았다. 
+
+
+
+![image](https://github.com/user-attachments/assets/18f6c8af-ca96-438c-911e-a45f01d31d25)
+
 
 
 오늘은 그냥 아시아 나가 나쁘다. 힝
