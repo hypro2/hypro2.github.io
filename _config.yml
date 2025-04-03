@@ -35,8 +35,5 @@ kramdown:
     css_class: 'highlight'
     default_lang: 'python'
 
-# Analytics
-analytics:
-  provider               : "google-gtag" 
-  google:
-    tracking_id          : "G-79B1FY19QX"
+google_analytics:
+  id: "G-79B1FY19QX"
