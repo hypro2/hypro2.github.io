@@ -35,7 +35,7 @@ mcp = FastMCP("Weather")
 @mcp.tool()
 async def get_weather(location: str) -> str:
     """지정된 위치의 날씨 정보를 반환"""
-    return "It's always sunny in New York"
+    return f"It's always sunny in {location}"
 
 # SSE 방식으로 MCP 서버 실행
 if __name__ == "__main__":
