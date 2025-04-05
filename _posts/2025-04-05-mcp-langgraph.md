@@ -2,11 +2,11 @@
 layout: post
 title: MCP Langgraph AI 에이전트 아키텍처와 LangChain MCP Adapters의 FastMCP SSE 예제
 ---
-최근 AI 에이전트를 구축할 때, 다양한 외부 도구를 손쉽게 연결하고 확장할 수 있는 **MCP (Modular Command Protocol)** 아키텍처가 주목받고 있습니다.
+최근 AI 에이전트를 구축할 때, 다양한 외부 도구를 손쉽게 연결하고 확장할 수 있는 **MCP Model Context Protocol)** 아키텍처가 주목받고 있습니다.
 
 🧩 MCP란?
 
-**MCP(Modular Command Protocol)**는 LLM 기반 AI 에이전트가 다양한 외부 도구를 유연하게 호출할 수 있도록 설계된 **범용 인터페이스**입니다.
+**MCPModel Context Protocol)**는 LLM 기반 AI 에이전트가 다양한 외부 도구를 유연하게 호출할 수 있도록 설계된 개방형 프로토콜이며, 여러 기업 및 개발자들이 이를 활용한 프로젝트를 진행 중이다.
 
 ✔️ MCP의 주요 특징
 
