@@ -199,4 +199,3 @@ async def main():
 asyncio.run(main())
 ```
 
-아시아 나가 나쁘다
