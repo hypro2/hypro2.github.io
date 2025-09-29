@@ -18,11 +18,10 @@ LangChain을 사용해 보셨거나, 여러 단계를 거치는 복잡한 AI 에
   
 **LangGraph의 핵심 개념 정복 🧠:** 상태(State)를 정의하고, 각 노드(Node)와 엣지(Edge)를 연결하며 에이전트의 작업 흐름을 그래프 형태로 구축하는 LangGraph의 강력함을 직접 체험할 수 있습니다.
 
-
 LangChain의 기본 사용법은 알지만, **더 복잡하고 자율적인 에이전트**를 만들어보고 싶은 개발자
-**LangGraph**가 무엇인지, 어떻게 활용하는지 궁금했던 분
-약 1시간의 짧은 시간 동안 AI 에이전트 개발 프로젝트의 전체 흐름을 경험해보고 싶은 분
 
 **'Deep Agents with LangGraph'** 강의는 짧지만 매우 밀도 높은 경험을 제공했습니다. 
+
+한글로 된 예제가 필요하면 제가 직접 fork해서 만든 레포지토리가 있습니다. [바로가기](https://github.com/hypro2/deep-agents-from-scratch-korean)
 
 <img width="1101" height="788" alt="image" src="https://github.com/user-attachments/assets/de3360e0-1162-46f9-add6-e00112ac0432" />
