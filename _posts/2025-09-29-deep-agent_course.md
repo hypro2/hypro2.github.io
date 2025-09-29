@@ -3,11 +3,7 @@ layout: post
 title: 랭그래프 딥에이전트 코스
 ---
 
-<img width="1101" height="788" alt="image" src="https://github.com/user-attachments/assets/de3360e0-1162-46f9-add6-e00112ac0432" />
-
----
-
-##Deep Agents with LangGraph
+## Deep Agents with LangGraph
 
 안녕하세요! 오늘은 최근 LangChain Academy에서 무료로 수강한 **'Project: Deep Agents with LangGraph'** 강의를 공유하려고 합니다. 
 
@@ -28,3 +24,5 @@ LangChain의 기본 사용법은 알지만, **더 복잡하고 자율적인 에�
 약 1시간의 짧은 시간 동안 AI 에이전트 개발 프로젝트의 전체 흐름을 경험해보고 싶은 분
 
 **'Deep Agents with LangGraph'** 강의는 짧지만 매우 밀도 높은 경험을 제공했습니다. 
+
+<img width="1101" height="788" alt="image" src="https://github.com/user-attachments/assets/de3360e0-1162-46f9-add6-e00112ac0432" />
