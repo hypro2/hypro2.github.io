@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 랭그래프 딥에이전트 코스
+title: Deep Agents with LangGraph
 ---
 
 ## Deep Agents with LangGraph
