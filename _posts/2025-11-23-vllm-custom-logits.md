@@ -1,8 +1,8 @@
-
 ---
 layout: post
-title: 오픈 LLM에서 중국어, 한자 안뜨게 하기 (vLLM Custom Logits Processors)
+title:오픈 LLM에서 중국어, 한자 안뜨게 하기 vLLM Custom Logits Processors
 ---
+
 
 대규모 언어 모델을 쓰다 보면 특정 단어나 토큰이 나오지 않도록 막거나, 반대로 어떤 표현은 꼭 포함시키고 싶을 때가 있습니다. vLLM의 '커스텀 로짓 프로세서’입니다. 모델이 다음 토큰을 선택하기 직전 단계에 개입해서 로짓 값을 바꿀 수 있게 해주는 장치로, 모델의 동작을 원하는 방향으로 유도하는 데 매우 유용합니다.
 
