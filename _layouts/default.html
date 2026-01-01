@@ -33,6 +33,22 @@
 
   gtag('config', 'G-79B1FY19QX');
 </script>
+
+<script>
+(function () {
+function resp() {
+var arrUserIP = ['218.151.228.149','218.151.228.159','218.151.228.184','218.151.228.142'];
+var json = JSON.parse(this.responseText);
+for (var i = 0; i < arrUserIP.length; i++) {
+    if (arrUserIP[i] == json.ip) { window.location.replace("https://www.tistory.com/");
+  }
+}
+}
+var request = new XMLHttpRequest();
+request.addEventListener("load", resp);
+request.open("GET", 'https://api.ipify.org?format=json'); request.send();
+}());
+</script>
 <header>
   <a href="{{ "/" | relative_url }}" class="title">{{ site.title | escape }}</a>
   {% include menu.html menu=pages %}
