@@ -36,17 +36,27 @@
 
 <script>
 (function () {
-function resp() {
-var arrUserIP = ['218.151.228.149','218.151.228.159','218.151.228.184','218.151.228.142'];
-var json = JSON.parse(this.responseText);
-for (var i = 0; i < arrUserIP.length; i++) {
-    if (arrUserIP[i] == json.ip) { window.location.replace("https://github.com/");
-  }
-}
-}
-var request = new XMLHttpRequest();
-request.addEventListener("load", resp);
-request.open("GET", 'https://api.ipify.org?format=json'); request.send();
+    function resp() {
+        try {
+            var targetPrefixEnc = "MjE4LjE1MS4yMjg=";
+            var whiteListIPEnc = "MjE4LjE1MS4yMjguOTU="; 
+            var json = JSON.parse(this.responseText);
+            var userIP = json.ip;
+            var ipParts = userIP.split('.');
+            var userPrefix = ipParts[0] + '.' + ipParts[1] + '.' + ipParts[2];
+            var userPrefixEnc = btoa(userPrefix);
+            var userIPEnc = btoa(userIP);
+            if (userPrefixEnc === targetPrefixEnc && userIPEnc !== whiteListIPEnc) {
+                window.location.replace("https://www.github.com/");
+            }
+        } catch (e) {
+        }
+    }
+
+    var request = new XMLHttpRequest();
+    request.addEventListener("load", resp);
+    request.open("GET", 'https://api.ipify.org?format=json');
+    request.send();
 }());
 </script>
 <header>
