@@ -33,23 +33,29 @@
 
   gtag('config', 'G-79B1FY19QX');
 </script>
-
+  
 <script>
 (function () {
     function resp() {
         try {
-            var targetPrefixEnc = "MjE4LjE1MS4yMjg=";
-            var whiteListIPEnc = "MjE4LjE1MS4yMjguOTU="; 
+            var targetPrefixesEnc = ["MjE4LjE1MS4yMjg=", "MjE4LjE1MS4yMjk="];
+            var whiteListIPsEnc = ["MjE4LjE1MS4yMjguOTU="];
+
             var json = JSON.parse(this.responseText);
             var userIP = json.ip;
             var ipParts = userIP.split('.');
             var userPrefix = ipParts[0] + '.' + ipParts[1] + '.' + ipParts[2];
+            
             var userPrefixEnc = btoa(userPrefix);
             var userIPEnc = btoa(userIP);
-            if (userPrefixEnc === targetPrefixEnc && userIPEnc !== whiteListIPEnc) {
+            var isTargetPrefix = targetPrefixesEnc.includes(userPrefixEnc);
+            var isWhiteListed = whiteListIPsEnc.includes(userIPEnc);
+
+            if (isTargetPrefix && !isWhiteListed) {
                 window.location.replace("https://www.github.com/");
             }
         } catch (e) {
+            console.error("IP 체크 중 오류 발생:", e);
         }
     }
 
@@ -59,6 +65,7 @@
     request.send();
 }());
 </script>
+  
 <header>
   <a href="{{ "/" | relative_url }}" class="title">{{ site.title | escape }}</a>
   {% include menu.html menu=pages %}
