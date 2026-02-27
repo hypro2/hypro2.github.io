@@ -99,5 +99,3 @@ Perplexity 내부 벤치마크 데이터셋인 `PPLXQuery2Query` 및 `PPLXQuery2
 
 * Arxiv 논문: [https://arxiv.org/pdf/2602.11151](https://arxiv.org/pdf/2602.11151)
 * Hugging Face 저장소: [https://huggingface.co/perplexity-ai](https://huggingface.co/perplexity-ai)
-
-추가적으로 `pplx-embed-context-v1`을 활용한 구체적인 RAG 파이프라인 최적화 사례가 필요하시면 말씀해 주시기 바랍니다.
