@@ -91,7 +91,7 @@ if __name__ == "__main__":
 
 ## 실행 결과 및 평가
 
-Perplexity 내부 벤치마크 데이터셋인 `PPLXQuery2Query` 및 `PPLXQuery2Doc` 테스트 결과, pplx-embed 시리즈는 BGE-M3 및 기존 Qwen3-Embedding 모델을 상회하는 성능을 기록했습니다. 특히 `pplx-embed-context-v1`은 컨텍스트 텍스트 임베딩 벤치마크(ConTEB)에서 우수한 성과를 보이며 RAG(Retrieval-Augmented Generation) 시스템 구축에 최적화된 성능을 입증했습니다.
+Perplexity 내부 벤치마크 데이터셋인 `PPLXQuery2Query` 및 `PPLXQuery2Doc` 테스트 결과, pplx-embed 시리즈는 BGE-M3 및 기존 Qwen3-Embedding 모델을 상회하는 성능을 기록했습니다. 특히 `pplx-embed-context-v1`은 컨텍스트 텍스트 임베딩 벤치마크(ConTEB)에서 우수한 성과를 보이며 RAG(Retrieval-Augmented Generation) 시스템 구축에 최적화된 성능을 입증했습니다
 
 
 
