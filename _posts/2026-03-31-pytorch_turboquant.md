@@ -206,3 +206,4 @@ VRAM 한계로 인해 긴 컨텍스트 처리에 어려움을 겪고 있다면, 
 **관련 링크:**
 - TurboQuant 공식 GitHub: [https://github.com/tonbistudio/turboquant-pytorch](https://github.com/tonbistudio/turboquant-pytorch)
 - ICLR 2026 논문: "TurboQuant: Online Vector Quantization"
+- 코드 출처:https://github.com/tonbistudio/turboquant-pytorch
