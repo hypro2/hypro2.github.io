@@ -4,7 +4,7 @@ title: TurboQuant 고차원 회전을 이용한 KV 캐시 양자화 및 PyTorch 
 ---
 ## TurboQuant: 고차원 회전을 이용한 KV 캐시 양자화 및 PyTorch 실전 구현
 
-대규모 언어 모델(LLM) 추론 시 컨텍스트 길이가 길어짐에 따라 **KV 캐시(Key-Value Cache)**가 점유하는 VRAM 용량은 기하급수적으로 증가합니다. 이는 긴 문맥을 처리해야 하는 서비스에서 가장 큰 비용 병목 구간이 됩니다. 
+대규모 언어 모델(LLM) 추론 시 컨텍스트 길이가 길어짐에 따라 KV 캐시(Key-Value Cache)가 점유하는 VRAM 용량은 기하급수적으로 증가합니다. 이는 긴 문맥을 처리해야 하는 서비스에서 가장 큰 비용 병목 구간이 됩니다. 
 
 2026년 ICLR에서 발표된 **TurboQuant**는 고차원 벡터의 수학적 특성을 활용하여 별도의 데이터 학습(Calibration) 없이도 KV 캐시를 3~4비트 수준으로 압축하는 혁신적인 방법론을 제시했습니다. 본 포스팅에서는 `turboquant-pytorch` 구현체를 바탕으로 그 작동 원리와 실전 사용법을 분석합니다.
 
@@ -107,9 +107,6 @@ print(f"Compression Ratio: {usage['compression_ratio']:.2f}x")
 - **V3**: QJL 보정 대신 모든 비트를 MSE 품질에 할당하여 생성 품질을 극대화함.
 
 ---
-업로드하신 `turboquant_pytorch.ipynb` 파일의 **Generation Test** 섹션을 바탕으로, **Qwen2.5-3B-Instruct** 모델이 실제 생성 과정에서 어떻게 TurboQuant 캐시를 사용하는지 코드를 중심으로 설명하겠습니다.
-
----
 
 ## Qwen2.5 모델과 TurboQuant V3의 실전 통합
 
@@ -206,4 +203,3 @@ VRAM 한계로 인해 긴 컨텍스트 처리에 어려움을 겪고 있다면, 
 **관련 링크:**
 - TurboQuant 공식 GitHub: [https://github.com/tonbistudio/turboquant-pytorch](https://github.com/tonbistudio/turboquant-pytorch)
 - ICLR 2026 논문: "TurboQuant: Online Vector Quantization"
-- 코드 출처:https://github.com/tonbistudio/turboquant-pytorch
