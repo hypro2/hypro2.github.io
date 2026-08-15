@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Transformers를 generator로 만드는 방법
+tags: [서빙]
+noindex: true
 ---
 
 transformers를 쓰면 주로 model.generate()를 쓰게 되는데 이것을 쓰면 모든 토큰이 생성이 끝날때 까지 아무 것도 확인 할 수 없다. streamer 기능을 사용하면 바로바로 생성되는 토큰을 확인 할 수 있고 generator로 만들 수 있는데 이번에는 특히 TextIteratorStreamer를 이용해서 구현할 것이다. 

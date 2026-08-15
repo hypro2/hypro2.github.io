@@ -1,6 +1,15 @@
+*, *::before, *::after
+  box-sizing: border-box
+
+html
+  color-scheme: dark
+
+html[data-theme="light"]
+  color-scheme: light
+
 body
-  background: $light
-  color: $dark
+  background: var(--bg)
+  color: var(--fg)
   font-family: $font-family
   font-weight: $font-weight
   font-size: $font-size
@@ -11,86 +20,104 @@ body
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
-@media (prefers-color-scheme: dark)
-  body
-    background: $dark
-    color: $light
+// 한글은 어절 단위로 끊어야 읽힌다. justify는 쓰지 않는다.
+body, p, li, td, th, h1, h2, h3, h4, h5, h6
+  word-break: keep-all
+  overflow-wrap: break-word
 
 h1, h2, h3, h4, h5, h6
   font-weight: $heading-weight
+  line-height: 1.35
+  letter-spacing: -.01em
+
+article h2
+  font-size: 1.45em
+  margin: 2.2em 0 .7em
+  padding-bottom: .35em
+  border-bottom: 1px solid var(--border)
+
+article h3
+  font-size: 1.18em
+  margin: 1.8em 0 .6em
 
 b, strong, th
-  font-weight: $font-weight + 200
-
-p
-  text-align: justify
+  font-weight: 700
 
 a
-  color: $link-color
-  text-decoration: inherit
+  color: var(--accent)
+  text-decoration: none
   &:hover
     text-decoration: underline
+    text-underline-offset: .2em
 
 header a, footer a, aside a
   color: inherit
 
-header time
-  color: reduce(100)
-
 hr
-  border: 1px solid reduce(30)
-  margin: 2em 0
-
-article:not(:last-of-type)
-  border-bottom: 1px solid reduce(14)
+  border: 0
+  border-top: 1px solid var(--border)
+  margin: 2.5em 0
 
 blockquote
-  background: reduce(6)
-  border-left: 3px solid reduce(90)
-  padding: 1px 1.5em
-  opacity: .75
+  background: var(--surface)
+  border-left: 3px solid var(--accent)
+  border-radius: 0 var(--radius) var(--radius) 0
+  color: var(--fg-dim)
+  padding: .1em 1.4em
+  margin: 1.5em 0
 
-blockquote, figure
-  margin: 1em 0
-
-img
-  margin: .5em 0
+figure
+  margin: 1.5em 0
 
 li
-  margin: .25em 0
+  margin: .3em 0
 
 img
-  border-radius: 2px
+  border-radius: var(--radius)
   max-width: 100%
   height: auto
+  margin: .5em 0
 
 table
-  display: inline-block
+  display: block
   max-width: 100%
-  overflow-y: scroll
-  border-spacing: 1px
-  border-radius: 2px
-  box-shadow: 0 0 0 1px reduce(12) inset
+  overflow-x: auto
+  border-collapse: collapse
+  border-radius: var(--radius)
+  margin: 1.5em 0
 
 th, td
   padding: .5em 1em
-  box-shadow: 0 0 0 1px reduce(12)
+  border: 1px solid var(--border)
+  text-align: left
 
-tr:hover, tr:nth-child(odd) td
-  background: reduce(4)
+th
+  background: var(--surface-2)
+
+tr:nth-child(even) td
+  background: var(--surface)
 
 pre
-  background: reduce(12)
-  border-radius: 2px
-  font-size: .8em
+  background: var(--code-bg)
+  color: var(--code-fg)
+  border: 1px solid var(--border)
+  border-radius: var(--radius)
+  font-family: $mono-family
+  font-size: .82em
+  line-height: 1.6
   margin: 1.5em 0
-  padding: .8em 1.2em
+  padding: 1em 1.2em
   overflow-x: auto
 
 \:not(pre) > code
-  font-size: .9em
-  background: reduce(15)
-  opacity: .7
-  border-radius: 2px
-  margin: 0 .1em
-  padding: .2em .4em
+  font-family: $mono-family
+  font-size: .87em
+  background: var(--surface-2)
+  color: var(--accent)
+  border-radius: 5px
+  padding: .15em .4em
+
+// 폼 요소가 테마를 따라오게
+input, button, select, textarea
+  font: inherit
+  color: inherit

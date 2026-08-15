@@ -1,6 +1,8 @@
 ---
 layout: post
 title: finetuning error 모음
+tags: [파인튜닝, 개발환경]
+noindex: true
 ---
 RuntimeError: Cannot find valid samples, check data/README.md for the data format
 

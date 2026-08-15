@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 모델 리뷰 anthropic의 Claude 3 사용 및 API 사용법
+tags: [모델리뷰]
 ---
 
 이번에 새로나온 "클로드 3"은 Anthropıc이 개발한 대규모 언어 모델입니다.
@@ -23,10 +24,10 @@ API 키 획득 절차는 다음과 같습니다.
 
 오늘 저는 새롭게 가입해서 5달러를 무료로 받았습니다.
 
-![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb9uEj0%2FbtsFyu8JC9e%2FkLlB9b38PcWbvKLxiBpI70%2Fimg.png)
+![image](/assets/images/posts/2024-03-07-anthropic-claude3-1.png)
 
 
-![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F2JwCW%2FbtsFBbfZCk8%2FaJMdxOqnr4cfpBGk5a9wq1%2Fimg.png)
+![image](/assets/images/posts/2024-03-07-anthropic-claude3-2.png)
 
 
 #### **API 키 획득**
@@ -35,9 +36,9 @@ API키를 얻기위해 Get API keys에 들어가 create key를 누릅니다.
 
 아무 단어나 넣으면 알아서 암호화된 값으로 변환해서 key값을 제공합니다.
 
-![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FQslXt%2FbtsFAveJRJl%2FwGZOwBfEKN3yRzfJ7OgQj1%2Fimg.png)
+![image](/assets/images/posts/2024-03-07-anthropic-claude3-3.png)
 
-![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FBncUc%2FbtsFzedpjzu%2FXhybDKxLD1TkehtdKpApHK%2Fimg.png)
+![image](/assets/images/posts/2024-03-07-anthropic-claude3-4.png)
 
 
 ### **코드 실행**

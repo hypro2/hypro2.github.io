@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 모델 리뷰 OLMo Bitnet 1B을 colab에서 실행해보자
+tags: [모델리뷰, 양자화]
 ---
 
 요즘 화두에 있는 Bitnet 양자화를 직접 구현했다는 NousResearch의 OLMo-Bitnet-1B을 리뷰해볼 예정입니다.  
@@ -94,7 +95,7 @@ class BitLinear158(nn.Linear):
 
 ### STE는 무엇인가?
 
-![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbjr3f0%2FbtsGj1cQeOw%2Fmg9gbhXE0F26wnuhWMxiXK%2Fimg.png)
+![](/assets/images/posts/2024-04-03-olmo-bitnet-1.png)
 
 STE는 "Straight Through Estimator"의 약자로, 중량 양자화나 활성화 양자화와 같은 연산에서 사용되는 기술입니다. 이는 역전파(backpropagation) 중에 발생하는 그레이디언트(gradient)의 전달을 보다 쉽게 하기 위한 방법 중 하나입니다.
 
@@ -142,7 +143,7 @@ pipe = pipeline("text-generation",
 pipe("The capitol of Paris is",  max_new_tokens=256)
 ```
 
-![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F7AV1v%2FbtsGhUlS7Fp%2FARfLsKoyx4Nsk9BXgOIAXK%2Fimg.png)
+![](/assets/images/posts/2024-04-03-olmo-bitnet-2.png)
 
 ```
 [{'generated_text': 'The capitol of Paris is a historic and beautiful square that is full of symbolism, the square stands for the French capital. In 2015 in honour of the 50th anniversary of the foundation of the City Square, they decided to do away with a square known as the National Assembly-Parliament and rebrand it as the Congress of the People’s Republic of France, so called as the Foulon Constitution.\nThe new President was elected on a very short leash. He started his inauguration with an address that has been translated into several languages: “To our people—our children—the great workers who work behind the scenes to deliver the infrastructure projects we would like to see completed… we will be working together with all the countries throughout the world, working together for the realization of the projects that are important to us”.\nThat is why he made it clear that the future of politics lies not just in the construction but also in the future of the economy of a society: that after 2025, there will be no more building jobs for young workers; that between 15 and 20 million people will have no choice but to move out of their homes; that those who will be forced to stay in their houses must live on a daily basis – that the citizens who cannot pay their rent should be'}]

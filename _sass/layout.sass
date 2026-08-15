@@ -1,28 +1,53 @@
+// 뼈대: 상단바 - main - 푸터. 사이드바가 붙는 넓은 화면은 sidebar.sass가 덮어쓴다.
+
 body
   display: flex
   flex-direction: column
 
-article
-  flex-grow: 1
+main
+  flex: 1 0 auto
+  width: 100%
+  max-width: var(--maxw)
+  margin: 0 auto
+  padding: 2rem 1.25rem 4rem
 
-body > header, body > footer
+body > footer
+  border-top: 1px solid var(--border)
+  color: var(--fg-dim)
+  font-size: .9em
+  padding: 1.75rem 1.25rem
   display: flex
   flex-wrap: wrap
   align-items: center
-  justify-content: space-between
+  justify-content: center
+  gap: .5rem 1.5rem
+  text-align: center
 
-body > header, body > article, body > footer
-  padding: 1.5em
+body > footer nav
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  gap: .5rem 1.25rem
 
-article header
-  margin-bottom: 1.5em
+.footer-links a
+  color: var(--fg-mute)
+  &:hover
+    color: var(--fg)
 
-article header h1
-  font-size: 1.7em
-  margin: 0 0 .1em
+article > header
+  margin-bottom: 2rem
 
-nav
-  margin: .5em -1.2em
+article > header h1
+  font-size: 1.9em
+  margin: 0 0 .5rem
 
-nav a
-  margin: .5em 1.2em
+article > header h1 a:hover
+  text-decoration: none
+
+.meta
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  gap: .5rem .9rem
+  color: var(--fg-mute)
+  font-size: .85em

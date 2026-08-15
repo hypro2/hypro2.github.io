@@ -1,23 +1,30 @@
 title: "김형 BLOG"
 author: "김형"
+url: "https://hypro2.github.io"
 description: "안녕하세요. 여기는 LLM을 연습하는 연습장 입니다."
 permalink: /:title/
-lang: "en"
+lang: "ko"
 excerpt_separator: "\n\n\n"
-date_format: "%B %d, %Y"
+date_format: "%Y년 %m월 %d일"
 
 # Layout
 
 show_excerpts: true        # show article excerpts on the home page
-show_frame: true           # adds a gray frame to the site
-show_sidebar: True        # show a sidebar instead of the usual header
-minimal: false             # use a dark header
+show_sidebar: true         # 넓은 화면(≥64em)에서 좌측 사이드바
+
+# Pagination (jekyll-paginate v1 — GitHub Pages 기본 빌드에서 지원)
+
+paginate: 10
+paginate_path: "/page:num/"
 
 # Menu
 
 navigation:                # accepts {file, title, url, icon, sidebaricon}
-  - {file: "index.html"}
-  - {file: "README.md"}
+  - {title: Home, url: "/", icon: home}
+  - {title: Tags, url: "/tags/", icon: tags}
+  - {title: About, url: "/about/", icon: user}
+  - {title: Contact, url: "/contact/", icon: address-card}
+  - {title: Privacy, url: "/privacy/", icon: shield-alt}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Github, icon: github, url: "https://github.com/hypro2"}
@@ -25,8 +32,15 @@ external:                  # shows a footer with social links - for available ic
   - {title: Subscribe, icon: rss, url: "/feed.xml"}
   - {title: Mail, icon: envelope, url: "mailto:hyeong9647@gmail.com"}
 
+ui_icons:                  # 스프라이트에 포함시킬 UI 아이콘 (assets/fontawesome/icons.svg)
+  - {icon: sun}
+  - {icon: moon}
+  - {icon: bars}
+  - {icon: search}
+
 plugins:
  - jekyll-feed
+ - jekyll-paginate
 
 kramdown:
   input: GFM

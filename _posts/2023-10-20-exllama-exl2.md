@@ -1,6 +1,8 @@
 ---
 layout: post
 title: exllamav2로 exl2형식으로 양자화하기
+tags: [양자화]
+noindex: true
 ---
 
 데이터셋은 준비했고, 모델도 형식에 맞게 변환했고 리눅스에서 명령어로 exl2를 변환해주는 코드를 작성해주면된다.

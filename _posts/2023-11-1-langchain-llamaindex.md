@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 랭체인과 라마인덱스 비교
+tags: [LangChain]
 ---
 오늘의 할 일은 라마 인덱스(구 GPT 인덱스)와 랭체인에 대한 비교를 진행할 것입니다. 조사해를 해본 자료를 조합하면 대충 아래와 같습니다. 
 🚀 Langchain은 초기 프로젝트 시작 및 빠른 구현에 적합하며 러닝 커브가 낮음.  
@@ -17,7 +18,7 @@ title: 랭체인과 라마인덱스 비교
 💡 llama Index는 고급 사용자나 명확한 프로젝트 요구사항이 있는 경우에 적합.
 
 #### 랭체인과 라마인덱스 비교
-![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FrdIRx%2Fbtszy3Jaw8y%2FjdbbN6j4jjRqZqK4C9EnJK%2Fimg.png)
+![](/assets/images/posts/2023-11-1-langchain-llamaindex-1.png)
 
 #### Langchain (랭체인):
 

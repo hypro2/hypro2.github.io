@@ -1,6 +1,7 @@
 ---
 layout : post
 title : Efficient Training of Language Models to Fill in the Middle | 논문 리뷰 영상 감상
+tags: [논문리뷰]
 ---
 
 1.  **대형 언어 모델 소개:**

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: gemma3 vllm에서 dtype bfloat16과 float16 빈칸 문제
+tags: [서빙, 개발환경]
+noindex: true
 ---
 
 현재 젬마3가 나와서 구동을 돌려보는데 제대로 안되는 경우가 발생한다. vllm에서 dtype을 float16으로 돌릴때 문제가 나온다.

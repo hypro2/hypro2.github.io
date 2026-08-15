@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Pydantic Class 란?
+tags: [개발환경]
 ---
 
   

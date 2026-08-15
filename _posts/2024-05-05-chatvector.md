@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Paper 리뷰 Chat Vector 학습된 가중치 매개변수를 더하고 빼는 것으로 사전 학습된 모델에 대화 능력을 부여
+tags: [논문리뷰, 파인튜닝]
 ---
 
 LLM 관련 논문중에 재밌는 것을 발견 했습니다. Llama-3-Open-Ko-8B-Instruct-preview의 README를 보던 중 Chat Vector라는 것을 알게 되었습니다. Chat Vector 학습된 가중치 매개변수를 더하고 빼는 것으로 사전 학습된 모델에 대화 능력을 부여해준다는게 흥미로웠습니다.
@@ -12,7 +13,7 @@ LLM 관련 논문중에 재밌는 것을 발견 했습니다. Llama-3-Open-Ko-8B
 
 **Chat Vector: A Simple Approach to Equip LLMs with Instruction Following and Model Alignment in New Languages**
 
-![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FlC9p3%2FbtsHalVajVn%2FtvB8tLpM9H2XLEqloJu7sk%2Fimg.png)
+![image](/assets/images/posts/2024-05-05-chatvector-1.png)
 
 그림 중 PLM은 Pretrained Language Model(사전 학습 모델)을, CP는 Continual Pre-training(계속된 사전 학습)을 의미합니다. LLM의 가중치에서도 word2vec 처럼 " 한국 - 서울 + 도쿄 = 일본"과 같은 것이 가능하다는 내용입니다.
 
@@ -57,7 +58,7 @@ for k, v in cp_model.state_dict().items():
     v.copy_(new_value)
 ```
 
-![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F73sAY%2FbtsG8ANjsay%2FKJebbS4LTnxQeYZ1I8YryK%2Fimg.png)
+![image](/assets/images/posts/2024-05-05-chatvector-2.png)
 
 더 진행하고 싶은데!!! 디스크가 모잘라 ㅠㅠㅠ !!!!
 

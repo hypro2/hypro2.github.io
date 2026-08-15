@@ -1,6 +1,8 @@
 ---
 layout: post
 title: PaliGemma 구글의 오픈소스 멀티모달 리뷰
+tags: [멀티모달, 모델리뷰]
+noindex: true
 ---
 
 구글의 오픈소스 멀티모달 Paligemma입니다. 

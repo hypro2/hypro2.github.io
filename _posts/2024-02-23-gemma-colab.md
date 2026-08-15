@@ -1,6 +1,8 @@
 ---
 layout: post
 title: gemma colab에서 사용하기
+tags: [모델리뷰]
+noindex: true
 ---
 
 

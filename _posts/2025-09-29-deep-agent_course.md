@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Deep Agents with LangGraph
+tags: [에이전트, LangChain]
 ---
 
 ## Deep Agents with LangGraph

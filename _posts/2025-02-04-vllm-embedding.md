@@ -1,6 +1,7 @@
 ---
 layout: post
 title: vLLM으로 임베딩 모델 서빙
+tags: [서빙, RAG]
 ---
 
 LLM에서는 최근 RAG에서 많이 쓰는 임베딩 모델을 일부 지원하기 시작함.  지원하는 아키텍쳐가 적지만, LLM기반과 가장 많이 사용되는 BAAI의 SOTA 모델과 LLM 기반의 임베딩 모델 위주로 지원함. 

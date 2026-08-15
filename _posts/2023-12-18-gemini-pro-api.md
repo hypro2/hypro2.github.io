@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Gemini Pro API 사용해보기 (Python, Langchain)
+tags: [모델리뷰, LangChain]
 ---
 
 제미나이 프로의 API 발급과 사용방법을 알아보고 Python에서 작동하는 것을 보고 랭체인에 적용해보자
@@ -14,7 +15,7 @@ title: Gemini Pro API 사용해보기 (Python, Langchain)
 
 [https://blog.google/technology/ai/gemini-api-developers-cloud/](https://blog.google/technology/ai/gemini-api-developers-cloud/)
 
-<img width="769" alt="image" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FUyNya%2FbtsB7jbp4KF%2F4b0SFSmbk2mjJjdKkxlKB1%2Fimg.png">
+<img width="769" alt="image" src="/assets/images/posts/2023-12-18-gemini-pro-api-1.png">
 
 
 Gemini Pro의 생산 비용은 1000 자당 $ 0.0005이며 GPT-4-Turbo （ $ 0.03 / 1K ）보다 훨씬 저렴
@@ -27,7 +28,7 @@ Gemini Pro의 생산 비용은 1000 자당 $ 0.0005이며 GPT-4-Turbo （ $ 0.03
 [https://makersuite.google.com/app/apikey](https://makersuite.google.com/app/apikey)
 
 한번만 보여줌. 잘 복사해서 사용해야됨
-<img width="769" alt="image" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F5h3lp%2FbtsCf36aEn7%2F9JOeJFTkTyyQXvEtGf4uhK%2Fimg.png">
+<img width="769" alt="image" src="/assets/images/posts/2023-12-18-gemini-pro-api-2.png">
 
 
 # 실전 텍스트 모델
@@ -92,7 +93,7 @@ response.resolve()
 response.text
 ```
 
-<img width="769" alt="image" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbsSjmb%2FbtsCc5wFmlV%2FvVC8mL0vcE9Www5nnKSxlK%2Fimg.png">
+<img width="769" alt="image" src="/assets/images/posts/2023-12-18-gemini-pro-api-3.png">
 
 
 ### 예시1)
@@ -104,7 +105,7 @@ response.text
 
 ### 예시2) 
 
-<img width="500" alt="image" src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbLSZXJ%2FbtsB6mmnJnn%2FnrpAeBLoVW6Y2EHkIW8H0K%2Fimg.png">
+<img width="500" alt="image" src="/assets/images/posts/2023-12-18-gemini-pro-api-4.png">
 
 
 

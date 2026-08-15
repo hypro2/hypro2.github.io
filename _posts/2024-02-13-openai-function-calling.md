@@ -1,6 +1,7 @@
 ---
 layout: post
 title: OpenAI의 Function Calling의 원리를 알아보자
+tags: [출력제어]
 ---
 
 

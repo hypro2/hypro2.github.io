@@ -1,6 +1,7 @@
 ---
 layout: post
 title: LLM이 만든 망가진 JSON, 어떻게 고치지? - json_repair로 해결하기
+tags: [출력제어]
 ---
 
 대형 언어 모델(LLM)을 활용하다 보면 이런 경험 한 번쯤 해보셨을 겁니다.  

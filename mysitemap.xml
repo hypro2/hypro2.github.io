@@ -5,9 +5,9 @@ layout: null
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    {% for post in site.posts %}
+    {% for post in site.posts %}{% unless post.noindex %}
     <url>
-        <loc>{{ site.url }}{{ post.url }}</loc>
+        <loc>{{ post.url | absolute_url }}</loc>
         {% if post.lastmod == null %}
         <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
         {% else %}
@@ -24,5 +24,13 @@ layout: null
         <priority>{{ post.sitemap.priority }}</priority>
         {% endif %}
     </url>
-    {% endfor %}
+    {% endunless %}{% endfor %}
+    {% comment %}layout이 있는 페이지만 (mysitemap.xml, search.json 등 layout: null 제외){% endcomment %}
+    {% for pg in site.pages %}{% unless pg.sitemap == false or pg.noindex %}{% if pg.layout %}
+    <url>
+        <loc>{{ pg.url | absolute_url }}</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    {% endif %}{% endunless %}{% endfor %}
 </urlset>

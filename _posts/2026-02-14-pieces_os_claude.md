@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Pieces OS Claude Desktop과 연동하여 개발 워크플로우 기억 시스템 구축하기
+tags: [MCP, 개발환경]
 ---
 
 Pieces OS: Claude Desktop과 연동하여 개발 워크플로우 기억 시스템 구축하기

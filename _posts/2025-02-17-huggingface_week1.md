@@ -1,6 +1,8 @@
 ---
 layout: post
 title: 허깅페이스 에이전트 코스 week1
+tags: [에이전트]
+noindex: true
 ---
 
 허깅페이스에서 AI 에이전트 코스 온라인 강의를 만들었다해서 따라해보기로함. LangChain, LlamaIndex, SmolAgents을 사용해서 진행할 예정이고, 기본적인 Python과 LLM(Large Language Models) 지식만 있으면 누구나 참여할 수 있으며, 실습을 통해 AI 에이전트를 직접 개발하고 응용하는 경험을 쌓을 수 있을거라 함.
