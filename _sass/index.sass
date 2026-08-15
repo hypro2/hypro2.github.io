@@ -1,11 +1,43 @@
-$font-size: calc(0.8rem + 0.2vw) !default
-$font-weight: 400 !default
-$font-family: "PT Sans", -apple-system, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif !default
-$heading-weight: 600 !default
-$line-height: 1.6 !default
-$link-color: #68f !default
-$dark: #212228 !default
-$light: #ffffff !default
+// 디자인 토큰. 색은 전부 CSS 커스텀 프로퍼티로 두고
+// html[data-theme]만 바꿔서 라이트/다크를 전환한다.
 
-@function reduce ($percent)
-  @return rgba(mix($dark, $light), $percent / 100)
+$font-size: calc(0.95rem + 0.15vw) !default
+$font-weight: 400 !default
+$font-family: "PT Sans", "Pretendard", -apple-system, "Segoe UI", "Malgun Gothic", "Apple SD Gothic Neo", sans-serif !default
+$mono-family: "JetBrains Mono", "Cascadia Mono", "D2Coding", ui-monospace, SFMono-Regular, Consolas, monospace !default
+$heading-weight: 650 !default
+$line-height: 1.75 !default
+
+$sidebar-at: 64em !default
+
+\:root
+  --bg: #16171c
+  --surface: #1d1f26
+  --surface-2: #24262f
+  --fg: #e8e9ed
+  --fg-dim: #a0a3af
+  --fg-mute: #6f7381
+  --border: #2c2f3a
+  --accent: #5ac8fa
+  --accent-soft: rgba(90, 200, 250, .14)
+  --accent-2: #7ee787
+  --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .22)
+  // 코드는 두 테마 모두 다크로 둔다 (monokai 하이라이트 한 벌만 유지)
+  --code-bg: #1e1f26
+  --code-fg: #f8f8f2
+  --radius: 10px
+  --maxw: 46rem
+  --sidebar: 15rem
+
+\:root[data-theme="light"]
+  --bg: #ffffff
+  --surface: #f7f8fa
+  --surface-2: #eef0f4
+  --fg: #1a1c22
+  --fg-dim: #545965
+  --fg-mute: #868b98
+  --border: #e2e5ec
+  --accent: #0a7ea4
+  --accent-soft: rgba(10, 126, 164, .1)
+  --accent-2: #1a7f37
+  --shadow: 0 1px 2px rgba(20, 24, 40, .06), 0 8px 24px rgba(20, 24, 40, .07)

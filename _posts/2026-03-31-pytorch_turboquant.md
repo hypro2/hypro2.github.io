@@ -1,6 +1,7 @@
 ---
 layout: post
 title: TurboQuant 고차원 회전을 이용한 KV 캐시 양자화 및 PyTorch 실전 구현
+tags: [양자화, 논문리뷰]
 ---
 ## TurboQuant: 고차원 회전을 이용한 KV 캐시 양자화 및 PyTorch 실전 구현
 

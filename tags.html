@@ -1,0 +1,29 @@
+---
+title: "Tags"
+layout: default
+---
+
+<article>
+  <header><h1>태그</h1></header>
+
+  <div class="chips">
+    {% assign tags = site.tags | sort %}
+    {% for tag in tags %}
+      <a class="chip" href="#{{ tag[0] | slugify }}">{{ tag[0] }}<span class="chip-count">{{ tag[1].size }}</span></a>
+    {% endfor %}
+  </div>
+
+  {% for tag in tags %}
+  <section class="tag-section" id="{{ tag[0] | slugify }}">
+    <h2>{{ tag[0] }} <span class="chip-count">{{ tag[1].size }}</span></h2>
+    <ul class="archive">
+      {% for post in tag[1] %}
+      <li>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</article>

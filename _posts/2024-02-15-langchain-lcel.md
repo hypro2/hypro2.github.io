@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 랭체인의 LCEL 문법
+tags: [LangChain]
 ---
 langChain Expression Language (LCEL)는 체인을 쉽게 구성 할 수있는 선언적인 방법입니다
 

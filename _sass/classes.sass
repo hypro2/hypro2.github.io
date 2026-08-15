@@ -1,39 +1,305 @@
-.title
-  font-size: 1.25em
+// ── 상단바 (좁은 화면 기본 네비) ────────────────────────────────
+.topbar
+  position: sticky
+  top: 0
+  z-index: 20
+  display: flex
+  align-items: center
+  justify-content: space-between
+  gap: .5rem
+  padding: .7rem 1.25rem
+  background: var(--bg)
+  border-bottom: 1px solid var(--border)
 
-.more
-  margin: 2em 0 1em
+.brand
+  font-size: 1.05rem
+  font-weight: 700
+  letter-spacing: -.01em
 
-.more a
-  border-radius: 2px
-  border: 1.5px solid $link-color
-  padding: .4em .8em
-  transition: .2s background, .2s color
+.topbar-actions
+  display: flex
+  align-items: center
+  gap: .25rem
 
-.more a:hover
-  color: #fff
-  background: $link-color
-  text-decoration: inherit
+.icon-btn
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  width: 2.25rem
+  height: 2.25rem
+  padding: 0
+  background: none
+  border: 1px solid transparent
+  border-radius: 8px
+  color: var(--fg-dim)
+  cursor: pointer
+  &:hover
+    background: var(--surface-2)
+    color: var(--fg)
 
-.archive
-  font-size: 1.1em
+.menu
+  position: relative
+  > summary
+    list-style: none
+    &::-webkit-details-marker
+      display: none
+  > nav
+    position: absolute
+    right: 0
+    top: calc(100% + .5rem)
+    min-width: 14rem
+    padding: .5rem
+    background: var(--surface)
+    border: 1px solid var(--border)
+    border-radius: var(--radius)
+    box-shadow: var(--shadow)
+    a
+      display: block
+      padding: .5rem .7rem
+      border-radius: 7px
+      &:hover
+        background: var(--surface-2)
+        text-decoration: none
 
-.archive time
+// ── 검색 ───────────────────────────────────────────────────────
+.search
+  position: relative
+
+.search input
+  width: 100%
+  line-height: 1.4
+  padding: .55rem .85rem
+  background: var(--surface-2)
+  border: 1px solid var(--border)
+  border-radius: 8px
+  outline: none
+  &:focus
+    border-color: var(--accent)
+    box-shadow: 0 0 0 3px var(--accent-soft)
+  &::placeholder
+    color: var(--fg-mute)
+
+.search-results
+  margin-top: .4rem
+  max-height: 22rem
+  overflow-y: auto
+  a
+    display: block
+    padding: .5rem .7rem
+    border-radius: 7px
+    color: var(--fg)
+    font-size: .9em
+    line-height: 1.4
+    &:hover
+      background: var(--surface-2)
+      text-decoration: none
+    small
+      display: block
+      color: var(--fg-mute)
+      font-size: .82em
+  &:not(:empty)
+    padding: .35rem
+    background: var(--surface)
+    border: 1px solid var(--border)
+    border-radius: var(--radius)
+
+.search-empty
+  padding: .5rem .7rem
+  color: var(--fg-mute)
+  font-size: .9em
+
+// ── 홈 히어로 ──────────────────────────────────────────────────
+.hero
+  margin-bottom: 2.5rem
+  h1
+    font-size: 1.75em
+    margin: 0 0 .4rem
+  p
+    color: var(--fg-dim)
+    margin: 0 0 1.2rem
+
+// ── 글 카드 ────────────────────────────────────────────────────
+.card-list
+  display: flex
+  flex-direction: column
+  gap: .9rem
+
+.card
+  display: block
+  padding: 1.1rem 1.25rem
+  background: var(--surface)
+  border: 1px solid var(--border)
+  border-radius: var(--radius)
+  color: inherit
+  transition: border-color .15s, transform .15s, box-shadow .15s
+  &:hover
+    border-color: var(--accent)
+    box-shadow: var(--shadow)
+    text-decoration: none
+    transform: translateY(-2px)
+  h2
+    font-size: 1.12em
+    margin: .3rem 0 .45rem
+    line-height: 1.4
+  p
+    margin: 0
+    color: var(--fg-dim)
+    font-size: .92em
+
+// ── 태그 칩 ────────────────────────────────────────────────────
+.chips
+  display: flex
+  flex-wrap: wrap
+  gap: .4rem
+
+.chip
   display: inline-block
-  min-width: 10ch
-  min-height: 1.75em
-  margin: 0 .2em
+  padding: .15rem .55rem
+  background: var(--accent-soft)
+  border-radius: 999px
+  color: var(--accent)
+  font-size: .78rem
+  white-space: nowrap
+  &:hover
+    text-decoration: none
+    filter: brightness(1.15)
+
+.chip-count
+  color: var(--fg-mute)
+  margin-left: .3rem
+
+// ── 페이지네이션 / 이전·다음 글 ─────────────────────────────────
+.pagination
+  display: flex
+  align-items: center
+  justify-content: space-between
+  gap: 1rem
+  margin-top: 2.5rem
+  color: var(--fg-mute)
+  font-size: .9em
+  a
+    padding: .45rem .9rem
+    border: 1px solid var(--border)
+    border-radius: 8px
+    &:hover
+      border-color: var(--accent)
+      text-decoration: none
+
+.postnav
+  display: grid
+  gap: .75rem
+  grid-template-columns: 1fr
+  margin: 3rem 0 2rem
+  @media (min-width: 40em)
+    grid-template-columns: 1fr 1fr
+  .card
+    padding: .9rem 1.1rem
+  small
+    color: var(--fg-mute)
+    font-size: .8em
+  span
+    display: block
+    margin-top: .25rem
+    font-weight: 600
+    line-height: 1.4
+
+.postnav-next
+  text-align: right
+
+// ── 목차 ───────────────────────────────────────────────────────
+.toc
+  background: var(--surface)
+  border: 1px solid var(--border)
+  border-radius: var(--radius)
+  padding: .7rem 1.1rem
+  margin-bottom: 2rem
+  font-size: .92em
+  > summary
+    cursor: pointer
+    font-weight: 600
+    color: var(--fg-dim)
+  nav
+    margin-top: .6rem
+    display: flex
+    flex-direction: column
+    gap: .35rem
+  a
+    color: var(--fg-dim)
+    border-left: 2px solid transparent
+    padding-left: .7rem
+    &:hover
+      color: var(--fg)
+    &.is-active
+      color: var(--accent)
+      border-left-color: var(--accent)
+  .toc-h3
+    padding-left: 1.6rem
+    font-size: .95em
+// ponytail: 본문 위 접이식 목차. 우측 고정 레일은 main이 46rem이라 자리가 안 나온다.
+// 세 컬럼 그리드로 바꿀 각오가 서면 그때.
+
+// ── 코드 복사 버튼 ─────────────────────────────────────────────
+.code-wrap
+  position: relative
+  &:hover .copy
+    opacity: 1
+
+.copy
+  position: absolute
+  top: .6rem
+  right: .6rem
+  padding: .25rem .6rem
+  background: var(--surface-2)
+  border: 1px solid var(--border)
+  border-radius: 6px
+  color: var(--fg-dim)
+  font-size: .75rem
+  cursor: pointer
+  opacity: 0
+  transition: opacity .15s
+  &:hover
+    color: var(--fg)
+  &:focus-visible
+    opacity: 1
+
+// ── 아카이브 / 태그 목록 ───────────────────────────────────────
+.archive
+  list-style: none
+  padding: 0
+  li
+    display: flex
+    gap: .9rem
+    padding: .45rem 0
+    border-bottom: 1px solid var(--border)
+  time
+    flex: none
+    min-width: 6.5rem
+    color: var(--fg-mute)
+    font-size: .9em
+    font-variant-numeric: tabular-nums
+
+.tag-section
+  margin: 2.5rem 0
+  scroll-margin-top: 4.5rem
+  > h2
+    display: flex
+    align-items: baseline
+    gap: .5rem
+    margin-bottom: .5rem
 
 .icon
   height: 1em
   width: 1em
   fill: currentColor
-  transition: .2s color
-  vertical-align: middle
-  margin-bottom: .15em
+  vertical-align: -.125em
 
-a:hover .icon
-  color: reduce(100)
+// 테마 토글: 현재 테마에서 "바뀔 방향"의 아이콘만 보여준다
+.icon-sun, .icon-moon
+  display: none
+html[data-theme="dark"] .icon-sun
+  display: inline-block
+html[data-theme="light"] .icon-moon
+  display: inline-block
 
 .full table
   display: table
@@ -43,98 +309,39 @@ a:hover .icon
   overflow-x: auto
   overflow-y: hidden
 
+// ── 문법 강조 ──────────────────────────────────────────────────
 .rouge-table
   &, th, td, tr, pre
     font-size: inherit
     background: inherit !important
+    border: 0
     box-shadow: none
     width: initial
     margin: 0
     padding: 0
   .gl pre
     margin: 0 1.5em 0 .25em
-    opacity: .5
+    opacity: .4
 
 .highlight // https://github.com/richleland/pygments-css/blob/master/monokai.css <http://unlicense.org>
-  pre
-    background: rgba(lighten($dark, 6%), 0.9)
-    color: white
-  .c
-    color: #a29f90
+  .c, .cm, .cp, .c1, .cs, .gu
+    color: #75715e
   .err
     color: #960050
     background-color: #1e0010
-  .k
+  .k, .kc, .kd, .kp, .kr, .kt, .no
     color: #66d9ef
-  .l
+  .l, .m, .mf, .mh, .mi, .mo, .se, .il
     color: #ae81ff
-  .n
+  .n, .p, .nb, .ni, .nl, .nn, .py, .nv, .w, .bp, .vc, .vg, .vi
     color: #f8f8f2
-  .o
+  .o, .kn, .nt, .ow, .gd
     color: #f92672
-  .p
-    color: #f8f8f2
-  .cm, .cp, .c1, .cs
-    color: #75715e
+  .ld, .s, .sb, .sc, .sd, .s2, .sh, .si, .sx, .sr, .s1, .ss
+    color: #e6db74
+  .na, .nc, .nd, .ne, .nf, .nx, .gi
+    color: #a6e22e
   .ge
     font-style: italic
   .gs
     font-weight: bold
-  .kc, .kd
-    color: #66d9ef
-  .kn
-    color: #f92672
-  .kp, .kr, .kt
-    color: #66d9ef
-  .ld
-    color: #e6db74
-  .m
-    color: #ae81ff
-  .s
-    color: #e6db74
-  .na
-    color: #a6e22e
-  .nb
-    color: #f8f8f2
-  .nc
-    color: #a6e22e
-  .no
-    color: #66d9ef
-  .nd
-    color: #a6e22e
-  .ni
-    color: #f8f8f2
-  .ne, .nf
-    color: #a6e22e
-  .nl, .nn
-    color: #f8f8f2
-  .nx
-    color: #a6e22e
-  .py
-    color: #f8f8f2
-  .nt
-    color: #f92672
-  .nv
-    color: #f8f8f2
-  .ow
-    color: #f92672
-  .w
-    color: #f8f8f2
-  .mf, .mh, .mi, .mo
-    color: #ae81ff
-  .sb, .sc, .sd, .s2
-    color: #e6db74
-  .se
-    color: #ae81ff
-  .sh, .si, .sx, .sr, .s1, .ss
-    color: #e6db74
-  .bp, .vc, .vg, .vi
-    color: #f8f8f2
-  .il
-    color: #ae81ff
-  .gu
-    color: #75715e
-  .gd
-    color: #f92672
-  .gi
-    color: #a6e22e

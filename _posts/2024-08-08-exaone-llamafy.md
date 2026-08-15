@@ -1,6 +1,7 @@
 ---
 layout: post
 title: EXAONE 3.0 7.8B 모델의 llamafied과 파인튜닝
+tags: [모델리뷰, 파인튜닝]
 ---
 
 EXAONE 3.0 소개: EXAONE 3.0은 LG AI Research에서 개발한 명령 조정 언어 모델로, LLM(대형 언어 모델) 시리즈 중 최초의 개방형 모델로 유명합니다. 78억 개의 매개변수 버전이 연구 및 혁신을 지원하기 위해 공개적으로 출시되었습니다.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: MCP Langgraph AI 에이전트 아키텍처와 LangChain MCP Adapters의 FastMCP SSE 예제
+tags: [MCP, 에이전트, LangChain]
 ---
 최근 AI 에이전트를 구축할 때, 다양한 외부 도구를 손쉽게 연결하고 확장할 수 있는 **MCP Model Context Protocol)** 아키텍처가 주목받고 있습니다.
 

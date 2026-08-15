@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 랭체인 CacheBackedEmbeddings으로 캐시 임베딩 만들기
+tags: [LangChain, RAG]
 ---
 
 임베딩은 재계산을 피하기 위해 저장되거나 임시로 캐시될 수 있습니다. 임베딩 캐싱은 CacheBackedEmbeddings를 사용하여 수행할 수 있습니다. 

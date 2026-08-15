@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 라마 팩토리(LLaMA-Factory)를 통해 LLM 파인 튜닝을 쉽게
+tags: [파인튜닝]
 ---
 LLaMA Factory는 대규모 언어 모델(Large Language Models, LLMs)을 손쉽게 파인 튜닝할 수 있는 프레임워크로 소개됩니다. 이것은 기술적인 이해가 있는 사람이든 없든, 누구에게나 적합합니다. 💡  
   
@@ -27,7 +28,7 @@ pip install bitsandbytes>=0.39.0
 
 ### 사용 방법
 
-![image](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F4oyIy%2FbtsFMDrhvZI%2FwtOxE0aqfVpuZqV6ikg1JK%2Fimg.png)
+![image](/assets/images/posts/2024-03-15-llama-factory-1.png)
 
   
 **🚀 LLaMA-Factory: 파인 튜닝**  

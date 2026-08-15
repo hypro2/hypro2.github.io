@@ -1,6 +1,7 @@
 ---
 layout: post
 title: langchain과 Jsonformer를 이용해서 function calling 구현하기
+tags: [LangChain, 출력제어]
 ---
 
 langchain과 Jsonformer를 이용해서 function calling 구현하기

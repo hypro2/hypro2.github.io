@@ -1,6 +1,7 @@
 ---
 layout: post
 title: lora finetuning 후 EOS token이 안나오는 문제
+tags: [파인튜닝]
 ---
 
 

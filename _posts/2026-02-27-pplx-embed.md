@@ -1,6 +1,7 @@
 ---
 layout: post
 title: pplx-embed 확산 기반 사전학습을 통한 고성능 다국어 임베딩 시스템 구축
+tags: [RAG, 모델리뷰]
 ---
 
 pplx-embed: 확산 기반 사전학습을 통한 고성능 다국어 임베딩 시스템 구축

@@ -1,30 +1,36 @@
-<link rel="stylesheet" href="{{ "/assets/css/sidebar.css" | relative_url }}" media="screen and (min-width: 70em)">
 <aside style="display: none">
-  <img src="{{ "/assets/images/profile_image.jpg" | relative_url }}" alt="Profile Image"> <!-- 추가된 이미지 태그 -->
+  <img class="side-profile" src="{{ "/assets/images/profile_image.jpg" | relative_url }}" alt="{{ site.author }}">
+  <a class="side-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+  <div class="side-desc">{{ site.description }}</div>
+
+  {% include search.html id="side" %}
+
   <nav>
   {%- for item in site.navigation -%}
     {%- assign node = site.pages | where: "name", item.file | first -%}
     {%- assign url = item.url | default: node.url -%}
     {%- assign title = item.title | default: node.title -%}
     {%- assign icon = item.icon | default: item.sidebaricon -%}
-    <a aria-label="{{ title }}" href="{{ url | relative_url }}" {% if url == page.url %}class="selected"{% endif %}>
+    <a href="{{ url | relative_url }}" {% if url == page.url %}class="selected"{% endif %}>
       <svg aria-hidden="true" class="icon"><use xlink:href="{{ "/assets/fontawesome/icons.svg" | relative_url }}#{{ icon }}"></use></svg>
-      <span aria-hidden="true">{{ title }}</span>
+      <span>{{ title }}</span>
     </a>
   {%- endfor -%}
   {%- for item in site.external -%}
-    {%- assign node = site.pages | where: "name", item.file | first -%}
-    {%- assign url = item.url | default: node.url -%}
-    {%- assign title = item.title | default: node.title -%}
     {%- assign icon = item.icon | default: item.sidebaricon -%}
-    <a aria-label="{{ title }}" href="{{ url | relative_url }}" {% if url == page.url %}class="selected"{% endif %}>
+    <a href="{{ item.url | relative_url }}">
       <svg aria-hidden="true" class="icon"><use xlink:href="{{ "/assets/fontawesome/icons.svg" | relative_url }}#{{ icon }}"></use></svg>
-      <span aria-hidden="true">{{ title }}</span>
+      <span>{{ item.title }}</span>
     </a>
   {%- endfor -%}
-<!--     <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fhypro2&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a> -->
- <img src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fhypro2.github.io%2F&label=&icon=github&color=%23198754" style="display: block; margin: 0 auto;">
-
   </nav>
-  <div class="description">{{ site.description }}</div>
+
+  <button class="icon-btn side-theme" type="button" data-theme-toggle aria-label="테마 전환">
+    <svg aria-hidden="true" class="icon icon-sun"><use xlink:href="{{ "/assets/fontawesome/icons.svg" | relative_url }}#sun"></use></svg>
+    <svg aria-hidden="true" class="icon icon-moon"><use xlink:href="{{ "/assets/fontawesome/icons.svg" | relative_url }}#moon"></use></svg>
+  </button>
+
+  <div class="side-foot">
+    <img src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fhypro2.github.io%2F&label=&icon=github&color=%23198754" alt="hits">
+  </div>
 </aside>

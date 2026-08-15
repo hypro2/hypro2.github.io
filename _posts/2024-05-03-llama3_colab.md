@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 모델 리뷰 Llama3을 colab에서 실행해보자
+tags: [모델리뷰]
 ---
 
 Llama 3이란?

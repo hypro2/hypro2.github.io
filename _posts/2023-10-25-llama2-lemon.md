@@ -1,6 +1,7 @@
 ---
 layout: post
 title: llama2에 remon 데이터로 8bit LoRA 학습
+tags: [파인튜닝]
 ---
 
 간단히 llama2를 통해 remon데이터를 학습시켜서 AI인간 만드는 짓을 하겠다 remon data는 허깅 페이스에서 쉽게 구할 수 있음 nsfw가 없는 클린?한 데이터를 사용합니다.
@@ -51,7 +52,7 @@ model = get_peft_model(model, config)
 model.print_trainable_parameters()
 ```
 
-![ㅇㅁ](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdmWK1a%2FbtszcnTYCA2%2F3F7GTFVHFQC8MwkwoaNmdk%2Fimg.png)
+![ㅇㅁ](/assets/images/posts/2023-10-25-llama2-lemon-1.png)
 
 훈련에 사용될 파라미터의 개수는 0.24%만 업데이트가 되는 것을 확인 할 수 있었습니다.
 
@@ -88,7 +89,7 @@ split_data= []
 for i in range(len(data)):
     split_data.append(prompt_chat_completion(data[i]['conversations']))
 ```
-![ㅇㅁ](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FsxLGm%2Fbtsy6iUGwRR%2FyWHitnVrtsNBHwgE5oPIZ0%2Fimg.png)
+![ㅇㅁ](/assets/images/posts/2023-10-25-llama2-lemon-2.png)
 
 ```
 
@@ -157,7 +158,7 @@ model.config.use_cache = False  # silence the warnings. Please re-enable for inf
 trainer.train()
 trainer.save_model("./save_lora_dir")
 ```
-![ㅇㅁ](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbhgh3h%2Fbtsy8qLcAEv%2Fp1iyzVDsUZoYTCwKgD8o5k%2Fimg.png)
+![ㅇㅁ](/assets/images/posts/2023-10-25-llama2-lemon-3.png)
 
 ```
 from transformers import TextStreamer
@@ -173,5 +174,5 @@ output = model.generate(inputs=input_ids,
                        )
 output
 ```
-![ㅇㅁ](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcHF9Z1%2Fbtsy9QvSVsl%2F6K3K26IJz28Bd5ljumKz2k%2Fimg.png)
+![ㅇㅁ](/assets/images/posts/2023-10-25-llama2-lemon-4.png)
 완성! 이지만 계속 생성되서 stopping\_criteria\_list를 만들어줬어야만 했다 뭐가 문제일까나 ㅋㅋㅋㅋ

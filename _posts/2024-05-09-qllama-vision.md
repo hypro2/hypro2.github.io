@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 멀티모달 리뷰 qresearch의 llama3-vision-alpha 콜랩 구동
+tags: [멀티모달, 모델리뷰]
 ---
 
 LLM RnD 자료를 찾으러 Note에서 일본 LLM 동향을 검색하고 있었는데 qresearch라는 곳에서 llama3로 vision모델을 만들었다는 글을 보았습니다. 그냥 자기 것이 성능이 우수하다 이런 내용이 아닌 만들어서 코드 리뷰하는 문서 였습니다. 생각보다 유익한 내용인거 같아서 따라 구동 해봤습니다.
@@ -94,7 +95,7 @@ def process_tensors(input_ids, image_features, embedding_layer):
         new_embeds = new_embeds.to(device)
 ```
 
-![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdEqJde%2FbtsHkYsb3ts%2FZu9IeONkb1suwaYeJ1EGGk%2Fimg.png)
+![](/assets/images/posts/2024-05-09-qllama-vision-1.png)
 
 참고자료
 

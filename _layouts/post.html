@@ -4,16 +4,34 @@ layout: default
 
 <article>
   {% include meta.html post=page %}
+
+  <details class="toc" data-toc hidden>
+    <summary>목차</summary>
+    <nav></nav>
+  </details>
+
   {{ content }}
 
-  <div>
-    <script src="https://utteranc.es/client.js"
+  <nav class="postnav">
+    {% if page.previous %}
+    <a class="card" href="{{ page.previous.url | relative_url }}">
+      <small>← 이전 글</small>
+      <span>{{ page.previous.title }}</span>
+    </a>
+    {% endif %}
+    {% if page.next %}
+    <a class="card postnav-next" href="{{ page.next.url | relative_url }}">
+      <small>다음 글 →</small>
+      <span>{{ page.next.title }}</span>
+    </a>
+    {% endif %}
+  </nav>
+
+  <script src="https://utteranc.es/client.js"
     repo="hypro2/hypro2.github.io"
     issue-term="pathname"
     theme="preferred-color-scheme"
     crossorigin="anonymous"
     async>
-    </script>
-  </div>
-  
+  </script>
 </article>

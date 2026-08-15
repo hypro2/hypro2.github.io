@@ -1,6 +1,7 @@
 ---
 layout: post
 title: LLM 입력 최적화 및 비용 절감을 위한 경량화 라이브러리 Prompt Refiner
+tags: [출력제어, RAG]
 ---
 
 

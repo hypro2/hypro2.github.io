@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 벡터 데이터베이스와 벡터 인덱스 Faiss
+tags: [RAG]
 ---
 주로 LLM 관련되서 중장기적인 기억을 담당하는 부분을 수행으로 복합 비정형 데이터를 위해 효율적으로 저장 및 검색을 하기 위해 개발된 데이터베이스 구조
 
@@ -9,13 +10,13 @@ title: 벡터 데이터베이스와 벡터 인덱스 Faiss
 예시 그림 Mnist 3차원같이 한 공간에 표현할 수 있어야 한다. (에 표현한 그림이라서 2차원같지만 3차원)
 
 
-![](https://blog.kakaocdn.net/dn/c7ICK5/btszk506KEn/CDZH5hSINW3WEcLfj3c6cK/img.png)
+![](/assets/images/posts/2023-10-29-vetordatabase-index-1.png)
 
 기존의 키-밸류 기반의 DB에서 이러한 복합 비정형 데이터를 찾을 때 상당히 느리고 정확하지 않은 문제점이 있어서 고안 됬다고 한다.
 
 쿼리가 주어줬을 때 vecotor간의 거리를 계산해서 가장 가깝게 있는 것을 호출한다는 과정으로
 
-![이미지 출처 : https://youtu.be/7WCRhW1Z8NI](https://blog.kakaocdn.net/dn/bi5H88/btszk7khk0W/XfFEaiYKHbmjrHiRosaZhk/img.png)
+![이미지 출처 : https://youtu.be/7WCRhW1Z8NI](/assets/images/posts/2023-10-29-vetordatabase-index-2.png)
 
 이미지 출처 : https://youtu.be/7WCRhW1Z8NI
 
@@ -31,7 +32,7 @@ title: 벡터 데이터베이스와 벡터 인덱스 Faiss
 
 결론적으로, 자연어 처리에서 코사인 유사도를 사용하는 이유는 두 벡터 간의 각도를 중요하게 생각하기 때문입니다. 또한, 코사인 유사도는 벡터의 크기를 무시할 수 있기 때문에 더 일반적으로 사용됩니다.
 
-![이미지 출처 : https://youtu.be/7WCRhW1Z8NI](https://blog.kakaocdn.net/dn/MzZKY/btsznCDNzGc/FnoA8GzICT3huiq1wL3rRK/img.png)
+![이미지 출처 : https://youtu.be/7WCRhW1Z8NI](/assets/images/posts/2023-10-29-vetordatabase-index-3.png)
 
 이미지 출처 : https://youtu.be/7WCRhW1Z8NI
 

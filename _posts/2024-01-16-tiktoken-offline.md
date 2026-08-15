@@ -1,6 +1,8 @@
 ---
 layout: post
 title: tiktoken 및 cl100k_base을 오프라인에서 사용후기
+tags: [개발환경]
+noindex: true
 ---
 
 가끔 프로젝트를 하다보면 tiktoken을 오프라인으로 사용해야될 경우가 필요하다.

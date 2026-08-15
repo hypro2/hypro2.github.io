@@ -1,5 +1,14 @@
+{%- assign minutes = include.post.content | strip_html | size | divided_by: 500 | plus: 1 -%}
+{%- comment -%} ponytail: 한글 500자/분 어림. 더 정확한 계산이 필요해지면 그때 바꾼다. {%- endcomment -%}
 <header>
-  <h1><a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a></h1>
-  {%- assign date_format = site.date_format | default: "%B %d, %Y" -%}
-  <time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: date_format }}</time>
+  <h1>{{ include.post.title }}</h1>
+  <div class="meta">
+    <time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: site.date_format }}</time>
+    <span>{{ minutes }}분 읽기</span>
+    {%- if include.post.tags.size > 0 -%}
+    <span class="chips">
+      {% for tag in include.post.tags %}<a class="chip" href="{{ "/tags/" | relative_url }}#{{ tag | slugify }}">{{ tag }}</a>{% endfor %}
+    </span>
+    {%- endif -%}
+  </div>
 </header>

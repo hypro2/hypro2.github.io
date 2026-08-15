@@ -1,6 +1,7 @@
 ---
 layout: post
 title: llama2를 context 8k까지 확장하는 방법 RoPE, exllama
+tags: [서빙, 파인튜닝]
 ---
 해당 부분의 max\_seq\_len을 늘려주고 compress\_pos\_emb 혹은 alpha\_value를 지정해준 것입니다. 여기서 원래 지원하는 max 시퀀스의 길이를 늘리고 싶은 만큼의 배수를 넣어주면 적용하면 됩니다.  이것이 어떻게 되는 것을 제가 이해하기로는 Position embedding은 Self attention의 포지션에 대한 위치를 기억 시키기 위해 사용이 되는 중요한 요소중 하나 입니다. Llama는 Rotary Position Embedding은 회전행렬을 사용하여 위치에 대한 정보를 인코딩 하는 방식으로 구현되어 있습니다.
 

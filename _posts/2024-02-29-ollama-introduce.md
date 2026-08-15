@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Ollama windows로 langchain함께 쉽게 Local LLM 실행하기
+tags: [서빙, LangChain]
 ---
 
 Ollama는 로컬 LLM을 실행하기 복잡한 과정을 쉽게 줄여주는 프로그램입니다. 이제 Ollama가 Windows에서 미리보기로 제공되며, 이를 통해 최신 모델을 간편하게 테스트할 수 있습니다. Windows용 Ollama는 내장 GPU 가속화, 전체 모델 라이브러리 액세스, 그리고 OpenAI 호환성을 갖추고 있습니다. 이제 사용자들은 최신 모델을 손쉽게 활용할 수 있습니다.

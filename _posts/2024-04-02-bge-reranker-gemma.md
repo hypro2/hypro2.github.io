@@ -1,6 +1,8 @@
 ---
 layout: post
 title: LLM기반 임베딩 모델, bge 리랭커 모델 'bge-reranker-v2-gemma'
+tags: [RAG, 모델리뷰]
+noindex: true
 ---
 리랭커 모델 소개
 
