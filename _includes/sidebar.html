@@ -1,15 +1,14 @@
 <aside style="display: none">
   <img class="side-profile" src="{{ "/assets/images/profile_image.jpg" | relative_url }}" alt="{{ site.author }}">
+  <a class="side-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+  <div class="side-desc">{{ site.description }}</div>
 
-  <!-- 방문자 통계 뱃지 (애드블록 필터 우회 클래스명 적용) -->
-  <div id="stat-pill-box" class="side-stats-pill" style="display: inline-flex !important; align-items: center !important; justify-content: center !important; align-self: center !important; margin: 0 auto 0.9rem !important; border-radius: 4px !important; overflow: hidden !important; border: 1px solid var(--border, #333) !important; font-size: 11px !important; line-height: 1 !important; user-select: none !important; flex-shrink: 0 !important; box-shadow: 0 1px 2px rgba(0,0,0,0.15) !important;">
+  <!-- 방문자 통계 뱃지 (소개글과 검색창 사이) -->
+  <div id="stat-pill-box" class="side-stats-pill" style="display: inline-flex !important; align-items: center !important; justify-content: center !important; align-self: center !important; margin: 0 auto 1.25rem !important; border-radius: 4px !important; overflow: hidden !important; border: 1px solid var(--border, #333) !important; font-size: 11px !important; line-height: 1 !important; user-select: none !important; flex-shrink: 0 !important; box-shadow: 0 1px 2px rgba(0,0,0,0.15) !important;">
     <span style="background-color: #4b5563 !important; color: #ffffff !important; font-weight: 600 !important; padding: 4px 7px !important; letter-spacing: 0.5px !important; display: inline-block !important;">VISITS</span>
     <span style="background-color: #10b981 !important; color: #ffffff !important; padding: 4px 7px !important; display: inline-block !important;">Today <strong id="stat-today" style="font-weight: 700 !important; margin-left: 2px !important;">-</strong></span>
     <span style="background-color: #3b82f6 !important; color: #ffffff !important; padding: 4px 7px !important; display: inline-block !important;">Total <strong id="stat-total" style="font-weight: 700 !important; margin-left: 2px !important;">-</strong></span>
   </div>
-
-  <a class="side-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-  <div class="side-desc">{{ site.description }}</div>
 
   {% include search.html id="side" %}
 
