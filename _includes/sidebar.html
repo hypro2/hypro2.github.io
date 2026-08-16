@@ -31,10 +31,10 @@
   </button>
 
   <div class="side-foot">
-    <div id="visitor-counter-box" class="visitor-counter-badge" style="display: none;">
+    <div id="visitor-counter-box" class="visitor-counter-badge">
       <span class="badge-label">VISITS</span>
-      <span class="badge-today">Today <strong id="cnt-today">0</strong></span>
-      <span class="badge-total">Total <strong id="cnt-total">0</strong></span>
+      <span class="badge-today">Today <strong id="cnt-today">-</strong></span>
+      <span class="badge-total">Total <strong id="cnt-total">-</strong></span>
     </div>
   </div>
 
@@ -79,27 +79,27 @@
     (function() {
       const GAS_API_URL = "https://script.google.com/macros/s/AKfycbx8500bcIV4vEGK7LW-d5KqPUPPgI5mEbP86TPIguTwEeub5emRo8CS2Ht0-aohbasGMg/exec";
 
-      const badgeBox = document.getElementById("visitor-counter-box");
       const elToday = document.getElementById("cnt-today");
       const elTotal = document.getElementById("cnt-total");
 
       function render(today, total) {
-        if (!elToday || !elTotal || !badgeBox) return;
-        elToday.textContent = Number(today).toLocaleString();
-        elTotal.textContent = Number(total).toLocaleString();
-        badgeBox.style.display = "inline-flex";
+        if (elToday) elToday.textContent = Number(today).toLocaleString();
+        if (elTotal) elTotal.textContent = Number(total).toLocaleString();
       }
 
-      // 이전 방문 기록이 로컬에 있으면 먼저 즉시 표시 (화면 깜빡임 방지)
+      // 이전 캐시가 있으면 먼저 표시
       const cachedToday = localStorage.getItem("blog_visit_today");
       const cachedTotal = localStorage.getItem("blog_visit_total");
       if (cachedToday !== null && cachedTotal !== null) {
         render(cachedToday, cachedTotal);
       }
 
-      // 페이지가 열릴 때마다 매번 구글 시트에 카운트 증가(+1) 요청 (PV 모드)
-      fetch(GAS_API_URL + "?action=hit")
-        .then(res => res.json())
+      // PV 카운트 증가 요청
+      fetch(GAS_API_URL + "?action=hit", { method: "GET", mode: "cors" })
+        .then(res => {
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          return res.json();
+        })
         .then(data => {
           if (data && data.status === "success") {
             localStorage.setItem("blog_visit_today", data.today);
@@ -107,7 +107,9 @@
             render(data.today, data.total);
           }
         })
-        .catch(() => {});
+        .catch(err => {
+          console.warn("[Visitor Counter] 조회 실패:", err);
+        });
     })();
   </script>
 </aside>
