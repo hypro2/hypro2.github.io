@@ -1,5 +1,12 @@
 <aside style="display: none">
   <img class="side-profile" src="{{ "/assets/images/profile_image.jpg" | relative_url }}" alt="{{ site.author }}">
+
+  <div id="visitor-counter-box" class="visitor-counter-badge">
+    <span class="badge-label">VISITS</span>
+    <span class="badge-today">Today <strong id="cnt-today">-</strong></span>
+    <span class="badge-total">Total <strong id="cnt-total">-</strong></span>
+  </div>
+
   <a class="side-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
   <div class="side-desc">{{ site.description }}</div>
 
@@ -30,13 +37,6 @@
     <svg aria-hidden="true" class="icon icon-moon"><use xlink:href="{{ "/assets/fontawesome/icons.svg" | relative_url }}#moon"></use></svg>
   </button>
 
-  <div class="side-foot">
-    <div id="visitor-counter-box" class="visitor-counter-badge">
-      <span class="badge-label">VISITS</span>
-      <span class="badge-today">Today <strong id="cnt-today">-</strong></span>
-      <span class="badge-total">Total <strong id="cnt-total">-</strong></span>
-    </div>
-  </div>
 
   <style>
     .visitor-counter-badge {
@@ -49,7 +49,7 @@
       line-height: 1;
       border: 1px solid var(--border);
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-      margin: 8px auto 0;
+      margin: 0 auto 0.85rem;
       user-select: none;
     }
     .visitor-counter-badge span {
