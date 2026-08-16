@@ -1,7 +1,7 @@
 <aside style="display: none">
   <img class="side-profile" src="{{ "/assets/images/profile_image.jpg" | relative_url }}" alt="{{ site.author }}">
 
-  <div id="visitor-counter-box" class="visitor-counter-badge">
+  <div id="visitor-counter-box" class="visitor-counter-badge" style="align-self: center; margin: 0 auto 0.85rem;">
     <span class="badge-label">VISITS</span>
     <span class="badge-today">Today <strong id="cnt-today">-</strong></span>
     <span class="badge-total">Total <strong id="cnt-total">-</strong></span>
@@ -36,81 +36,90 @@
     <svg aria-hidden="true" class="icon icon-sun"><use xlink:href="{{ "/assets/fontawesome/icons.svg" | relative_url }}#sun"></use></svg>
     <svg aria-hidden="true" class="icon icon-moon"><use xlink:href="{{ "/assets/fontawesome/icons.svg" | relative_url }}#moon"></use></svg>
   </button>
+</aside>
 
+<style>
+  /* 사이드바 스크롤바 완전 숨김 (스크롤 기능은 유지) */
+  aside {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+  aside::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
 
-  <style>
-    .visitor-counter-badge {
-      display: inline-flex;
-      align-items: center;
-      font-size: 11px;
-      font-family: inherit;
-      border-radius: 4px;
-      overflow: hidden;
-      line-height: 1;
-      border: 1px solid var(--border);
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-      margin: 0 auto 0.85rem;
-      user-select: none;
-    }
-    .visitor-counter-badge span {
-      padding: 4px 7px;
-    }
-    .visitor-counter-badge .badge-label {
-      background-color: #4b5563;
-      color: #ffffff;
-      font-weight: 600;
-      letter-spacing: 0.5px;
-    }
-    .visitor-counter-badge .badge-today {
-      background-color: #10b981;
-      color: #ffffff;
-    }
-    .visitor-counter-badge .badge-total {
-      background-color: #3b82f6;
-      color: #ffffff;
-    }
-    .visitor-counter-badge strong {
-      font-weight: 700;
-      margin-left: 2px;
-    }
-  </style>
+  /* 방문자 수 뱃지 스타일 */
+  .visitor-counter-badge {
+    display: inline-flex !important;
+    align-items: center;
+    font-size: 11px;
+    font-family: inherit;
+    border-radius: 4px;
+    overflow: hidden;
+    line-height: 1;
+    border: 1px solid var(--border, #333);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+    user-select: none;
+  }
+  .visitor-counter-badge span {
+    padding: 4px 7px;
+    display: inline-flex;
+    align-items: center;
+  }
+  .visitor-counter-badge .badge-label {
+    background-color: #4b5563;
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .visitor-counter-badge .badge-today {
+    background-color: #10b981;
+    color: #ffffff;
+  }
+  .visitor-counter-badge .badge-total {
+    background-color: #3b82f6;
+    color: #ffffff;
+  }
+  .visitor-counter-badge strong {
+    font-weight: 700;
+    margin-left: 3px;
+  }
+</style>
 
-  <script>
-    (function() {
-      const GAS_API_URL = "https://script.google.com/macros/s/AKfycbx8500bcIV4vEGK7LW-d5KqPUPPgI5mEbP86TPIguTwEeub5emRo8CS2Ht0-aohbasGMg/exec";
+<script>
+  (function() {
+    const GAS_API_URL = "https://script.google.com/macros/s/AKfycbx8500bcIV4vEGK7LW-d5KqPUPPgI5mEbP86TPIguTwEeub5emRo8CS2Ht0-aohbasGMg/exec";
 
+    function updateUI(today, total) {
       const elToday = document.getElementById("cnt-today");
       const elTotal = document.getElementById("cnt-total");
+      if (elToday) elToday.textContent = Number(today).toLocaleString();
+      if (elTotal) elTotal.textContent = Number(total).toLocaleString();
+    }
 
-      function render(today, total) {
-        if (elToday) elToday.textContent = Number(today).toLocaleString();
-        if (elTotal) elTotal.textContent = Number(total).toLocaleString();
-      }
+    // 1. 이전 캐시가 있다면 즉시 표시
+    const cachedToday = localStorage.getItem("blog_visit_today");
+    const cachedTotal = localStorage.getItem("blog_visit_total");
+    if (cachedToday && cachedTotal) {
+      updateUI(cachedToday, cachedTotal);
+    }
 
-      // 이전 캐시가 있으면 먼저 표시
-      const cachedToday = localStorage.getItem("blog_visit_today");
-      const cachedTotal = localStorage.getItem("blog_visit_total");
-      if (cachedToday !== null && cachedTotal !== null) {
-        render(cachedToday, cachedTotal);
-      }
+    // 2. 구글 시트에 PV 카운트 요청 전송
+    fetch(GAS_API_URL + "?action=hit", { method: "GET", mode: "cors" })
+      .then(res => res.json())
+      .then(data => {
+        if (data && (data.status === "success" || data.today !== undefined)) {
+          localStorage.setItem("blog_visit_today", data.today);
+          localStorage.setItem("blog_visit_total", data.total);
+          updateUI(data.today, data.total);
+        }
+      })
+      .catch(err => {
+        console.error("[Visitor Counter] Error:", err);
+      });
+  })();
+</script>
 
-      // PV 카운트 증가 요청
-      fetch(GAS_API_URL + "?action=hit", { method: "GET", mode: "cors" })
-        .then(res => {
-          if (!res.ok) throw new Error("HTTP " + res.status);
-          return res.json();
-        })
-        .then(data => {
-          if (data && data.status === "success") {
-            localStorage.setItem("blog_visit_today", data.today);
-            localStorage.setItem("blog_visit_total", data.total);
-            render(data.today, data.total);
-          }
-        })
-        .catch(err => {
-          console.warn("[Visitor Counter] 조회 실패:", err);
-        });
-    })();
-  </script>
-</aside>
 
