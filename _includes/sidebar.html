@@ -1,10 +1,11 @@
 <aside style="display: none">
   <img class="side-profile" src="{{ "/assets/images/profile_image.jpg" | relative_url }}" alt="{{ site.author }}">
 
-  <div id="visitor-counter-box" class="visitor-counter-badge" style="align-self: center; margin: 0 auto 0.85rem;">
-    <span class="badge-label">VISITS</span>
-    <span class="badge-today">Today <strong id="cnt-today">-</strong></span>
-    <span class="badge-total">Total <strong id="cnt-total">-</strong></span>
+  <!-- 방문자 통계 뱃지 (애드블록 필터 우회 클래스명 적용) -->
+  <div id="stat-pill-box" class="side-stats-pill" style="display: inline-flex !important; align-items: center !important; justify-content: center !important; align-self: center !important; margin: 0 auto 0.9rem !important; border-radius: 4px !important; overflow: hidden !important; border: 1px solid var(--border, #333) !important; font-size: 11px !important; line-height: 1 !important; user-select: none !important; flex-shrink: 0 !important; box-shadow: 0 1px 2px rgba(0,0,0,0.15) !important;">
+    <span style="background-color: #4b5563 !important; color: #ffffff !important; font-weight: 600 !important; padding: 4px 7px !important; letter-spacing: 0.5px !important; display: inline-block !important;">VISITS</span>
+    <span style="background-color: #10b981 !important; color: #ffffff !important; padding: 4px 7px !important; display: inline-block !important;">Today <strong id="stat-today" style="font-weight: 700 !important; margin-left: 2px !important;">-</strong></span>
+    <span style="background-color: #3b82f6 !important; color: #ffffff !important; padding: 4px 7px !important; display: inline-block !important;">Total <strong id="stat-total" style="font-weight: 700 !important; margin-left: 2px !important;">-</strong></span>
   </div>
 
   <a class="side-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
@@ -49,43 +50,6 @@
     width: 0 !important;
     height: 0 !important;
   }
-
-  /* 방문자 수 뱃지 스타일 */
-  .visitor-counter-badge {
-    display: inline-flex !important;
-    align-items: center;
-    font-size: 11px;
-    font-family: inherit;
-    border-radius: 4px;
-    overflow: hidden;
-    line-height: 1;
-    border: 1px solid var(--border, #333);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-    user-select: none;
-  }
-  .visitor-counter-badge span {
-    padding: 4px 7px;
-    display: inline-flex;
-    align-items: center;
-  }
-  .visitor-counter-badge .badge-label {
-    background-color: #4b5563;
-    color: #ffffff;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-  }
-  .visitor-counter-badge .badge-today {
-    background-color: #10b981;
-    color: #ffffff;
-  }
-  .visitor-counter-badge .badge-total {
-    background-color: #3b82f6;
-    color: #ffffff;
-  }
-  .visitor-counter-badge strong {
-    font-weight: 700;
-    margin-left: 3px;
-  }
 </style>
 
 <script>
@@ -93,15 +57,15 @@
     const GAS_API_URL = "https://script.google.com/macros/s/AKfycbx8500bcIV4vEGK7LW-d5KqPUPPgI5mEbP86TPIguTwEeub5emRo8CS2Ht0-aohbasGMg/exec";
 
     function updateUI(today, total) {
-      const elToday = document.getElementById("cnt-today");
-      const elTotal = document.getElementById("cnt-total");
+      const elToday = document.getElementById("stat-today");
+      const elTotal = document.getElementById("stat-total");
       if (elToday) elToday.textContent = Number(today).toLocaleString();
       if (elTotal) elTotal.textContent = Number(total).toLocaleString();
     }
 
     // 1. 이전 캐시가 있다면 즉시 표시
-    const cachedToday = localStorage.getItem("blog_visit_today");
-    const cachedTotal = localStorage.getItem("blog_visit_total");
+    const cachedToday = localStorage.getItem("blog_stat_today");
+    const cachedTotal = localStorage.getItem("blog_stat_total");
     if (cachedToday && cachedTotal) {
       updateUI(cachedToday, cachedTotal);
     }
@@ -111,13 +75,13 @@
       .then(res => res.json())
       .then(data => {
         if (data && (data.status === "success" || data.today !== undefined)) {
-          localStorage.setItem("blog_visit_today", data.today);
-          localStorage.setItem("blog_visit_total", data.total);
+          localStorage.setItem("blog_stat_today", data.today);
+          localStorage.setItem("blog_stat_total", data.total);
           updateUI(data.today, data.total);
         }
       })
       .catch(err => {
-        console.error("[Visitor Counter] Error:", err);
+        console.error("[Site Stats] Error:", err);
       });
   })();
 </script>
