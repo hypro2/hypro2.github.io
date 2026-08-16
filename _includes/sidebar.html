@@ -25,7 +25,8 @@
   {%- endfor -%}
   {%- for item in site.external -%}
     {%- assign icon = item.icon | default: item.sidebaricon -%}
-    <a href="{{ item.url | relative_url }}">
+    {%- assign is_external = item.url | slice: 0, 4 -%}
+    <a href="{{ item.url | relative_url }}" {% if is_external == 'http' %}target="_blank" rel="noopener noreferrer"{% endif %}>
       <svg aria-hidden="true" class="icon"><use xlink:href="{{ "/assets/fontawesome/icons.svg" | relative_url }}#{{ icon }}"></use></svg>
       <span>{{ item.title }}</span>
     </a>

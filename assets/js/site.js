@@ -84,15 +84,16 @@
         // ponytail: 단순 부분일치. 글이 수백 개가 되면 그때 lunr 검토.
         if (!hits.length) { out.innerHTML = '<div class="search-empty">결과 없음</div>'; return; }
         out.innerHTML = hits.map(function (p) {
-          return '<a href="' + p.url + '">' + esc(p.title) + '<small>' + p.date + '</small></a>';
+          return '<a href="' + esc(p.url) + '">' + esc(p.title) + '<small>' + esc(p.date) + '</small></a>';
         }).join('');
       });
     });
   });
 
   function esc(s) {
-    return s.replace(/[&<>"]/g, function (c) {
-      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    if (!s) return '';
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
     });
   }
 })();

@@ -19,7 +19,7 @@ permalink: /privacy/
 | Google Analytics 4 | 방문 통계 분석 | 쿠키, 방문 기록, 기기·브라우저 정보, IP 주소(구글에 의해 익명화 처리) | [구글 개인정보처리방침](https://policies.google.com/privacy) |
 | Google AdSense | 광고 게재 | 쿠키 및 광고 식별자를 이용한 관심 기반 광고 | [광고에서의 데이터 사용](https://policies.google.com/technologies/partner-sites) |
 | utterances (댓글) | 댓글 기능 | 댓글 작성 시 GitHub 계정으로 로그인하며, 댓글은 본 사이트의 GitHub 저장소 이슈에 공개 저장됩니다 | [GitHub 개인정보처리방침](https://docs.github.com/site-policy/privacy-policies/github-privacy-statement) |
-| hitscounter.dev | 방문자 수 표시 | 페이지 요청 정보 | 해당 서비스 정책에 따름 |
+| Google Apps Script | 자체 방문자 수 집계 | 단순 방문 카운트 (개인식별정보 수집 없음) | [구글 개인정보처리방침](https://policies.google.com/privacy) |
 
 Google을 포함한 제3자 공급업체는 쿠키를 사용하여 이용자가 본 사이트나 다른 사이트를 방문한 기록을 바탕으로 광고를 게재할 수 있습니다.
 

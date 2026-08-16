@@ -33,6 +33,7 @@
 </script>
 <script defer src="{{ "/assets/js/site.js" | relative_url }}"></script>
 {% include analytics.html %}
+{% include adsense.html %}
 </head>
 <body>
 
@@ -62,7 +63,8 @@
           <a href="{{ item.url | default: node.url | relative_url }}">{{ item.title | default: node.title }}</a>
         {% endfor %}
         {% for item in site.external %}
-          <a href="{{ item.url }}">{{ item.title }}</a>
+          {% assign is_ext = item.url | slice: 0, 4 %}
+          <a href="{{ item.url }}" {% if is_ext == 'http' %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ item.title }}</a>
         {% endfor %}
       </nav>
     </details>
