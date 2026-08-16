@@ -31,6 +31,84 @@
   </button>
 
   <div class="side-foot">
-    <img src="https://hitscounter.dev/api/hit?url=https%3A%2F%2Fhypro2.github.io%2F&label=&icon=github&color=%23198754" alt="hits">
+    <div id="visitor-counter-box" class="visitor-counter-badge" style="display: none;">
+      <span class="badge-label">VISITS</span>
+      <span class="badge-today">Today <strong id="cnt-today">0</strong></span>
+      <span class="badge-total">Total <strong id="cnt-total">0</strong></span>
+    </div>
   </div>
+
+  <style>
+    .visitor-counter-badge {
+      display: inline-flex;
+      align-items: center;
+      font-size: 11px;
+      font-family: inherit;
+      border-radius: 4px;
+      overflow: hidden;
+      line-height: 1;
+      border: 1px solid var(--border);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+      margin: 8px auto 0;
+      user-select: none;
+    }
+    .visitor-counter-badge span {
+      padding: 4px 7px;
+    }
+    .visitor-counter-badge .badge-label {
+      background-color: #4b5563;
+      color: #ffffff;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .visitor-counter-badge .badge-today {
+      background-color: #10b981;
+      color: #ffffff;
+    }
+    .visitor-counter-badge .badge-total {
+      background-color: #3b82f6;
+      color: #ffffff;
+    }
+    .visitor-counter-badge strong {
+      font-weight: 700;
+      margin-left: 2px;
+    }
+  </style>
+
+  <script>
+    (function() {
+      const GAS_API_URL = "https://script.google.com/macros/s/AKfycbx8500bcIV4vEGK7LW-d5KqPUPPgI5mEbP86TPIguTwEeub5emRo8CS2Ht0-aohbasGMg/exec";
+
+      const badgeBox = document.getElementById("visitor-counter-box");
+      const elToday = document.getElementById("cnt-today");
+      const elTotal = document.getElementById("cnt-total");
+
+      function render(today, total) {
+        if (!elToday || !elTotal || !badgeBox) return;
+        elToday.textContent = Number(today).toLocaleString();
+        elTotal.textContent = Number(total).toLocaleString();
+        badgeBox.style.display = "inline-flex";
+      }
+
+      // 이전 방문 기록이 로컬에 있으면 먼저 즉시 표시 (화면 깜빡임 방지)
+      const cachedToday = localStorage.getItem("blog_visit_today");
+      const cachedTotal = localStorage.getItem("blog_visit_total");
+      if (cachedToday !== null && cachedTotal !== null) {
+        render(cachedToday, cachedTotal);
+      }
+
+      // 페이지가 열릴 때마다 매번 구글 시트에 카운트 증가(+1) 요청 (PV 모드)
+      fetch(GAS_API_URL + "?action=hit")
+        .then(res => res.json())
+        .then(data => {
+          if (data && data.status === "success") {
+            localStorage.setItem("blog_visit_today", data.today);
+            localStorage.setItem("blog_visit_total", data.total);
+            render(data.today, data.total);
+          }
+        })
+        .catch(() => {});
+    })();
+  </script>
 </aside>
+
